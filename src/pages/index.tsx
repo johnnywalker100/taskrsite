@@ -1,7 +1,7 @@
 
-import { CheckCircle2, Calendar, Bell, Sparkles, Shield, Smile, ArrowRight, Menu, X, Lock, Smartphone, ListChecks, Users, Home, HelpCircle, Zap } from "lucide-react";
+import { CheckCircle2, Calendar, Bell, Sparkles, Shield, Smile, ArrowRight, Menu, X, Lock, Smartphone, ListChecks, Users, Home as HomeIcon, HelpCircle, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
 import Link from "next/link";
@@ -483,7 +483,7 @@ export default function Home() {
         <div className="max-w-lg mx-auto px-4">
           <div className="flex justify-around items-center h-16">
             <a href="#" className="flex flex-col items-center gap-1 text-muted-foreground hover:text-mint-dark transition-colors py-2 px-3">
-              <Home className="w-5 h-5" />
+              <HomeIcon className="w-5 h-5" />
               <span className="text-xs font-medium">Home</span>
             </a>
             <a href="#features" className="flex flex-col items-center gap-1 text-muted-foreground hover:text-mint-dark transition-colors py-2 px-3">
