@@ -1,5 +1,5 @@
 
-import { CheckCircle2, Calendar, Bell, Users, Sparkles, TrendingUp, Clock, Shield, Smile, ArrowRight, Apple, Star, Menu, X } from "lucide-react";
+import { CheckCircle2, Calendar, Bell, Sparkles, TrendingUp, Shield, Smile, ArrowRight, Apple, Star, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -86,52 +86,6 @@ export default function Home() {
     }
   ];
 
-  const pricing = [
-    {
-      name: "Free",
-      price: "$0",
-      period: "forever",
-      features: [
-        "Up to 3 family members",
-        "10 active tasks",
-        "Basic notifications",
-        "iOS app access"
-      ],
-      cta: "Get Started Free",
-      popular: false
-    },
-    {
-      name: "Family",
-      price: "$4.99",
-      period: "per month",
-      features: [
-        "Unlimited family members",
-        "Unlimited tasks",
-        "Priority notifications",
-        "Task history & analytics",
-        "Custom rewards system",
-        "Priority support"
-      ],
-      cta: "Start Free Trial",
-      popular: true
-    },
-    {
-      name: "Family Plus",
-      price: "$8.99",
-      period: "per month",
-      features: [
-        "Everything in Family",
-        "Multiple households",
-        "Advanced scheduling",
-        "Custom task templates",
-        "Export reports",
-        "Premium support"
-      ],
-      cta: "Start Free Trial",
-      popular: false
-    }
-  ];
-
   const faqs = [
     {
       question: "Is Taskr really free?",
@@ -174,9 +128,7 @@ export default function Home() {
             <div className="hidden md:flex items-center gap-8">
               <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Features</a>
               <a href="#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors">How It Works</a>
-              <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
               <a href="#faq" className="text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
-              <Button variant="ghost">Sign In</Button>
               <Button className="gradient-mint border-0 hover:opacity-90 transition-opacity">Get Started</Button>
             </div>
 
@@ -191,9 +143,7 @@ export default function Home() {
             <div className="px-4 py-4 space-y-3">
               <a href="#features" className="block py-2 text-muted-foreground hover:text-foreground transition-colors">Features</a>
               <a href="#how-it-works" className="block py-2 text-muted-foreground hover:text-foreground transition-colors">How It Works</a>
-              <a href="#pricing" className="block py-2 text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
               <a href="#faq" className="block py-2 text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
-              <Button variant="ghost" className="w-full justify-start">Sign In</Button>
               <Button className="w-full gradient-mint border-0 hover:opacity-90 transition-opacity">Get Started</Button>
             </div>
           </div>
@@ -329,50 +279,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="pricing" className="py-20 lg:py-32 gradient-mint-soft">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 gradient-mint border-0 text-white">Pricing</Badge>
-            <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">Simple, Transparent Pricing</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Start free, upgrade when you're ready. No hidden fees.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricing.map((plan, index) => (
-              <Card key={index} className={`relative ${plan.popular ? 'border-mint-medium border-2 shadow-xl scale-105' : 'border-mint-light/50'}`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <Badge className="gradient-mint border-0 text-white">Most Popular</Badge>
-                  </div>
-                )}
-                <CardHeader>
-                  <CardTitle className="text-2xl">{plan.name}</CardTitle>
-                  <div className="mt-4">
-                    <span className="text-4xl font-bold">{plan.price}</span>
-                    <span className="text-muted-foreground ml-2">/ {plan.period}</span>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3 mb-6">
-                    {plan.features.map((feature, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <CheckCircle2 className="w-5 h-5 text-mint-medium mt-0.5 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button className={`w-full ${plan.popular ? 'gradient-mint border-0' : 'bg-white border border-mint-medium text-mint-dark hover:bg-mint-light/20'}`}>
-                    {plan.cta}
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section id="faq" className="py-20 lg:py-32 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -435,7 +341,6 @@ export default function Home() {
               <h3 className="font-semibold mb-4">Product</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><a href="#features" className="hover:text-foreground transition-colors">Features</a></li>
-                <li><a href="#pricing" className="hover:text-foreground transition-colors">Pricing</a></li>
                 <li><a href="#faq" className="hover:text-foreground transition-colors">FAQ</a></li>
               </ul>
             </div>
