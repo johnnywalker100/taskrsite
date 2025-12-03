@@ -1,10 +1,9 @@
 
-import { CheckCircle2, Calendar, Bell, Sparkles, Shield, Smile, ArrowRight, Menu, X, Lock, Smartphone, ListChecks, Users } from "lucide-react";
+import { CheckCircle2, Calendar, Bell, Sparkles, Shield, Smile, ArrowRight, Menu, X, Lock, Smartphone, ListChecks, Users, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
-import Link from "next/link";
 import Head from "next/head";
 
 export default function Home() {
@@ -168,6 +167,10 @@ export default function Home() {
               <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Features</a>
               <a href="#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors">How It Works</a>
               <a href="#faq" className="text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
+              <a href="mailto:support@thetaskr.app" className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1">
+                <Mail className="w-4 h-4" />
+                Support
+              </a>
               <a href="#early-access">
                 <Button className="gradient-mint border-0 hover:opacity-90 transition-opacity">Join beta</Button>
               </a>
@@ -185,6 +188,10 @@ export default function Home() {
               <a href="#features" className="block py-2 text-muted-foreground hover:text-foreground transition-colors">Features</a>
               <a href="#how-it-works" className="block py-2 text-muted-foreground hover:text-foreground transition-colors">How It Works</a>
               <a href="#faq" className="block py-2 text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
+              <a href="mailto:support@thetaskr.app" className="py-2 text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2">
+                <Mail className="w-4 h-4" />
+                Support
+              </a>
               <a href="#early-access" className="block">
                 <Button className="w-full gradient-mint border-0 hover:opacity-90 transition-opacity">Join beta</Button>
               </a>
@@ -193,7 +200,7 @@ export default function Home() {
         )}
       </nav>
 
-      <section className="relative overflow-hidden gradient-mint-soft py-20 lg:py-32 section-mint-fade-bottom">
+      <section className="relative overflow-hidden gradient-mint-soft py-20 lg:py-32 fade-to-white">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-72 h-72 bg-mint-medium rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-mint-light rounded-full blur-3xl"></div>
@@ -235,7 +242,7 @@ export default function Home() {
         </p>
       </section>
 
-      <section id="features" className="py-20 lg:py-32 bg-white">
+      <section id="features" className="py-20 lg:py-32 bg-white fade-to-mint">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-mint-light text-mint-dark">Features</Badge>
@@ -310,7 +317,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="how-it-works" className="py-20 lg:py-32 gradient-mint-soft">
+      <section id="how-it-works" className="py-20 lg:py-32 gradient-mint-soft fade-to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <Badge className="mb-4 gradient-mint border-0 text-white">How It Works</Badge>
@@ -390,7 +397,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="faq" className="py-20 lg:py-32 bg-white">
+      <section id="faq" className="py-20 lg:py-32 bg-white fade-to-mint">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-mint-light text-mint-dark">FAQ</Badge>
