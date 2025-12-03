@@ -123,7 +123,7 @@
     left: 0;
     right: 0;
     height: 100px;
-    background: linear-gradient(to bottom, transparent, hsl(150 55% 85%));
+    background: linear-gradient(to bottom, transparent, hsl(150 60% 90%));
     pointer-events: none;
     z-index: 1;
   }

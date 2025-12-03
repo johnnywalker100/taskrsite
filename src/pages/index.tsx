@@ -422,7 +422,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="early-access" className="py-20 lg:py-32 gradient-mint-soft">
+      <section id="early-access" className="py-20 lg:py-32 bg-mint-solid">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">Join Early Families Testing Taskr</h2>
           <p className="text-xl text-muted-foreground mb-10">
