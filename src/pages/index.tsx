@@ -1,67 +1,114 @@
 
-import { CheckCircle2, Calendar, Bell, Sparkles, TrendingUp, Shield, Smile, ArrowRight, Apple, Star, Menu, X } from "lucide-react";
+import { CheckCircle2, Calendar, Bell, Sparkles, Shield, Smile, ArrowRight, Apple, Star, Menu, X, Lock, Smartphone, ListChecks } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const features = [
     {
-      icon: CheckCircle2,
-      title: "Assign Tasks Easily",
-      description: "Create and assign chores to your kids in seconds. Set due dates and priority levels."
-    },
-    {
-      icon: Bell,
-      title: "Real-Time Updates",
-      description: "Get instant notifications when tasks are completed. Stay in the loop without asking."
+      icon: Lock,
+      title: "Tasks that actually get done",
+      description: "Apps pause until chores are finished, so kids stay focused and motivated."
     },
     {
       icon: Calendar,
-      title: "Smart Scheduling",
-      description: "Set recurring tasks and due times. Never forget weekly chores again."
+      title: "Smart Screen Time rules",
+      description: "Create limits that turn on automatically during homework, chores, or bedtime."
     },
     {
-      icon: TrendingUp,
-      title: "Track Progress",
-      description: "Visual dashboards show completion rates and help motivate your kids."
+      icon: Bell,
+      title: "Real-time updates",
+      description: "See pending tasks and remaining Screen Time from one parent dashboard."
     },
     {
       icon: Smile,
-      title: "Kid-Friendly Interface",
-      description: "Simple, colorful design that kids love. They can see exactly what needs to be done."
+      title: "Kid-friendly interface",
+      description: "Simple checklists that tie directly to Screen Time permissions."
     },
     {
       icon: Shield,
-      title: "Family Privacy",
-      description: "Your family data stays private and secure. We never share your information."
+      title: "Secure and private",
+      description: "Uses Apple’s approved Family Controls framework—nothing is tracked or sold."
     }
   ];
 
   const howItWorks = [
     {
       step: "1",
-      title: "Create Your Family",
-      description: "Sign up and add family members in under a minute."
+      title: "Add your kids",
+      description: "Connect each child’s device using Apple’s Family Controls in minutes."
     },
     {
       step: "2",
-      title: "Add Tasks",
-      description: "Create chores and assign them to your kids with due dates."
+      title: "Assign tasks",
+      description: "Add chores, homework, and reminders with due times that matter."
     },
     {
       step: "3",
-      title: "Kids Complete Tasks",
-      description: "Kids see their simple task list and check off completed items."
+      title: "Choose Screen Time rules",
+      description: "Pick which apps pause when tasks are due—social, games, or the whole device."
     },
     {
       step: "4",
-      title: "Stay Updated",
-      description: "Get real-time notifications and track household progress."
+      title: "Kids complete tasks to unlock",
+      description: "Once tasks are approved, Screen Time restrictions lift instantly."
+    }
+  ];
+
+  const screenTimeHighlights = [
+    {
+      title: "Automatic app blocking",
+      description: "When tasks are due, selected apps lock automatically on your child’s device."
+    },
+    {
+      title: "Unlocks when tasks are done",
+      description: "Kids check off tasks, you approve them, and Screen Time restrictions lift instantly."
+    },
+    {
+      title: "Custom rules",
+      description: "Block social apps during homework hours or only unlock games after key tasks."
+    },
+    {
+      title: "Granular control",
+      description: "Choose specific apps, categories, or full device pauses."
+    },
+    {
+      title: "No extra hardware",
+      description: "Everything runs through Apple’s Family Controls—safe, private, and approved."
+    }
+  ];
+
+  const comparisonRows = [
+    {
+      feature: "Task-based unlocking",
+      apple: false,
+      taskr: true
+    },
+    {
+      feature: "Automatic app blocking when chores are due",
+      apple: false,
+      taskr: true
+    },
+    {
+      feature: "Parent dashboard + task tracking",
+      apple: false,
+      taskr: true
+    },
+    {
+      feature: "Kid-friendly task list",
+      apple: false,
+      taskr: true
+    },
+    {
+      feature: "Runs on Apple-approved Family Controls",
+      apple: true,
+      taskr: true
     }
   ];
 
@@ -114,7 +161,15 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <>
+      <Head>
+        <title>Taskr — Tasks and Screen Time Controls for Parents</title>
+        <meta
+          name="description"
+          content="Taskr lets parents assign tasks and automatically block apps with Apple’s Screen Time API. Kids complete tasks to unlock screen time. iOS only."
+        />
+      </Head>
+      <div className="min-h-screen">
       <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-mint-light/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
@@ -163,10 +218,10 @@ export default function Home() {
               Now Available on iOS
             </Badge>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6 text-balance">
-              Keep Your Family Organized, <span className="text-mint-dark">Effortlessly</span>
+              Turn chores into <span className="text-mint-dark">clear, simple tasks</span> for your kids
             </h1>
-            <p className="text-xl sm:text-2xl text-muted-foreground mb-10 max-w-2xl mx-auto text-balance">
-              Assign chores, track progress, and get real-time updates as your kids complete tasks. Stay on schedule without the nagging.
+            <p className="text-xl sm:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto text-balance">
+              Taskr connects to Apple Screen Time so apps lock automatically when chores are due—and unlock the moment you approve completed tasks.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" className="gradient-mint border-0 hover:opacity-90 transition-opacity text-lg px-8 py-6">
@@ -181,6 +236,12 @@ export default function Home() {
             <p className="text-sm text-muted-foreground mt-6">Free forever plan available. No credit card required.</p>
           </div>
         </div>
+      </section>
+
+      <section className="bg-white py-10 px-4 sm:px-6 lg:px-8">
+        <p className="font-bold text-xl sm:text-2xl text-center max-w-4xl mx-auto text-balance">
+          No more nagging. Kids know exactly what to do, and their apps stay locked until they do it.
+        </p>
       </section>
 
       <section id="features" className="py-20 lg:py-32 bg-white">
@@ -205,6 +266,55 @@ export default function Home() {
                 </CardHeader>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="screen-time" className="py-20 lg:py-32 gradient-mint-soft">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <Badge className="mb-4 gradient-mint border-0 text-white">Screen Time</Badge>
+              <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">Built-in Screen Time Controls</h2>
+              <p className="text-xl text-muted-foreground mb-10">
+                A task app that can actually enforce tasks. Link chores to Screen Time rules and let Taskr lock or unlock apps for you.
+              </p>
+              <div className="space-y-6">
+                {screenTimeHighlights.map((item, index) => (
+                  <Card key={index} className="border-mint-light/60 bg-white/80">
+                    <CardHeader className="space-y-2">
+                      <CardTitle className="text-lg">{item.title}</CardTitle>
+                      <CardDescription className="text-base text-muted-foreground">
+                        {item.description}
+                      </CardDescription>
+                    </CardHeader>
+                  </Card>
+                ))}
+              </div>
+            </div>
+            <div>
+              <div className="mx-auto max-w-sm rounded-[40px] border border-mint-light bg-white shadow-2xl p-6 relative overflow-hidden">
+                <div className="text-center mb-6">
+                  <div className="mx-auto h-2 w-20 rounded-full bg-muted"></div>
+                </div>
+                <div className="rounded-2xl bg-gradient-to-b from-mint-light/40 to-white p-8 text-center border border-mint-light/50">
+                  <Smartphone className="w-10 h-10 text-mint-dark mx-auto mb-4" />
+                  <p className="text-2xl font-semibold text-foreground mb-2">Blocked by your parent</p>
+                  <p className="text-muted-foreground mb-6">until chores are finished.</p>
+                  <div className="rounded-xl border border-mint-light/60 bg-white px-4 py-3 text-left space-y-2">
+                    <div className="flex items-center justify-between text-sm font-medium">
+                      <span>Homework</span>
+                      <span className="text-mint-dark">Due 5:00 PM</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-muted-foreground text-sm">
+                      <ListChecks className="w-4 h-4" />
+                      <span>Apps unlock once this task is approved.</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute inset-x-10 bottom-6 h-2 rounded-full bg-muted/60"></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -274,6 +384,49 @@ export default function Home() {
                   </div>
                 </CardContent>
               </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="comparison" className="py-20 lg:py-32 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <Badge className="mb-4 bg-mint-light text-mint-dark">Why Taskr</Badge>
+            <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
+              Why Taskr Works Better Than Standard Screen Time
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Parents see the difference immediately—Taskr ties chores directly to device access.
+            </p>
+          </div>
+          <div className="border border-mint-light/70 rounded-2xl overflow-hidden shadow-sm">
+            <div className="grid grid-cols-3 bg-mint-light/40 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
+              <div className="py-4 px-4 text-left text-foreground">Feature</div>
+              <div className="py-4 px-4 text-center">Apple Screen Time</div>
+              <div className="py-4 px-4 text-center text-foreground">Taskr</div>
+            </div>
+            {comparisonRows.map((row) => (
+              <div
+                key={row.feature}
+                className="grid grid-cols-3 border-t border-mint-light/50 bg-white text-base"
+              >
+                <div className="py-4 px-4 font-medium text-foreground">{row.feature}</div>
+                <div className="py-4 px-4 flex items-center justify-center">
+                  {row.apple ? (
+                    <CheckCircle2 className="w-6 h-6 text-mint-medium" />
+                  ) : (
+                    <X className="w-6 h-6 text-muted-foreground" />
+                  )}
+                </div>
+                <div className="py-4 px-4 flex items-center justify-center">
+                  {row.taskr ? (
+                    <CheckCircle2 className="w-6 h-6 text-mint-medium" />
+                  ) : (
+                    <X className="w-6 h-6 text-muted-foreground" />
+                  )}
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -369,5 +522,6 @@ export default function Home() {
         </div>
       </footer>
     </div>
+    </>
   );
 }
