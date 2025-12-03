@@ -1,5 +1,5 @@
 
-import { CheckCircle2, Calendar, Bell, Sparkles, Shield, Smile, ArrowRight, Menu, X, Lock, Smartphone, ListChecks, Users } from "lucide-react";
+import { CheckCircle2, Calendar, Bell, Sparkles, Shield, Smile, ArrowRight, Menu, X, Lock, Smartphone, ListChecks, Users, Home, HelpCircle, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -193,7 +193,7 @@ export default function Home() {
         )}
       </nav>
 
-      <section className="relative overflow-hidden gradient-mint-soft py-20 lg:py-32">
+      <section className="relative overflow-hidden gradient-mint-soft py-20 lg:py-32 section-mint-fade-bottom">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-72 h-72 bg-mint-medium rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-mint-light rounded-full blur-3xl"></div>
@@ -235,7 +235,7 @@ export default function Home() {
         </p>
       </section>
 
-      <section id="features" className="py-20 lg:py-32 bg-white">
+      <section id="features" className="py-20 lg:py-32 bg-white section-fade-bottom">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-mint-light text-mint-dark">Features</Badge>
@@ -261,7 +261,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="screen-time" className="py-20 lg:py-32 gradient-mint-soft">
+      <section id="screen-time" className="py-20 lg:py-32 gradient-mint-soft section-fade-top">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -347,7 +347,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="comparison" className="py-20 lg:py-32 bg-white">
+      <section id="comparison" className="py-20 lg:py-32 bg-white section-fade-top section-fade-bottom">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <Badge className="mb-4 bg-mint-light text-mint-dark">Why Taskr</Badge>
@@ -415,7 +415,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="early-access" className="py-20 lg:py-32 gradient-mint-soft">
+      <section id="early-access" className="py-20 lg:py-32 gradient-mint-soft section-fade-top">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">Join Early Families Testing Taskr</h2>
           <p className="text-xl text-muted-foreground mb-10">
@@ -432,7 +432,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="bg-white border-t border-mint-light/30 py-12">
+      <footer className="bg-white border-t border-mint-light/30 py-12 pb-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
@@ -477,6 +477,32 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Fixed bottom navigation */}
+      <nav className="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-mint-light/30 safe-area-bottom">
+        <div className="max-w-lg mx-auto px-4">
+          <div className="flex justify-around items-center h-16">
+            <a href="#" className="flex flex-col items-center gap-1 text-muted-foreground hover:text-mint-dark transition-colors py-2 px-3">
+              <Home className="w-5 h-5" />
+              <span className="text-xs font-medium">Home</span>
+            </a>
+            <a href="#features" className="flex flex-col items-center gap-1 text-muted-foreground hover:text-mint-dark transition-colors py-2 px-3">
+              <Zap className="w-5 h-5" />
+              <span className="text-xs font-medium">Features</span>
+            </a>
+            <a href="#faq" className="flex flex-col items-center gap-1 text-muted-foreground hover:text-mint-dark transition-colors py-2 px-3">
+              <HelpCircle className="w-5 h-5" />
+              <span className="text-xs font-medium">FAQ</span>
+            </a>
+            <a href="#early-access" className="flex flex-col items-center gap-1 text-mint-dark transition-colors py-2 px-3">
+              <div className="w-5 h-5 rounded-full gradient-mint flex items-center justify-center">
+                <CheckCircle2 className="w-3 h-3 text-white" />
+              </div>
+              <span className="text-xs font-medium">Join Beta</span>
+            </a>
+          </div>
+        </div>
+      </nav>
     </div>
     </>
   );
