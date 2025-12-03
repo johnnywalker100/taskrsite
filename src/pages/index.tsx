@@ -1,9 +1,10 @@
 
-import { CheckCircle2, Calendar, Bell, Sparkles, Shield, Smile, ArrowRight, Menu, X, Lock, Smartphone, ListChecks, Users, Mail } from "lucide-react";
+import { CheckCircle2, Calendar, Bell, Sparkles, Shield, Smile, ArrowRight, Menu, X, Lock, Smartphone, ListChecks, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
+import Link from "next/link";
 import Head from "next/head";
 
 export default function Home() {
@@ -167,10 +168,9 @@ export default function Home() {
               <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Features</a>
               <a href="#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors">How It Works</a>
               <a href="#faq" className="text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
-              <a href="mailto:support@thetaskr.app" className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1">
-                <Mail className="w-4 h-4" />
-                Support
-              </a>
+              <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
+                Contact
+              </Link>
               <a href="#early-access">
                 <Button className="gradient-mint border-0 hover:opacity-90 transition-opacity">Join beta</Button>
               </a>
@@ -188,10 +188,9 @@ export default function Home() {
               <a href="#features" className="block py-2 text-muted-foreground hover:text-foreground transition-colors">Features</a>
               <a href="#how-it-works" className="block py-2 text-muted-foreground hover:text-foreground transition-colors">How It Works</a>
               <a href="#faq" className="block py-2 text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
-              <a href="mailto:support@thetaskr.app" className="py-2 text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2">
-                <Mail className="w-4 h-4" />
-                Support
-              </a>
+              <Link href="/contact" className="block py-2 text-muted-foreground hover:text-foreground transition-colors">
+                Contact
+              </Link>
               <a href="#early-access" className="block">
                 <Button className="w-full gradient-mint border-0 hover:opacity-90 transition-opacity">Join beta</Button>
               </a>
