@@ -268,7 +268,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="screen-time" className="py-20 lg:py-32 gradient-mint-soft">
+      <section id="screen-time" className="py-20 lg:py-32 bg-mint-solid">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -317,7 +317,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="how-it-works" className="py-20 lg:py-32 gradient-mint-soft fade-to-white">
+      <section id="how-it-works" className="py-20 lg:py-32 bg-mint-solid fade-to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <Badge className="mb-4 gradient-mint border-0 text-white">How It Works</Badge>

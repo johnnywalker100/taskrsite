@@ -84,6 +84,11 @@
   .gradient-mint-soft {
     background: linear-gradient(180deg, hsl(var(--mint-light)) 0%, hsl(150 70% 95%) 100%);
   }
+
+  /* Solid mint for consecutive mint sections */
+  .bg-mint-solid {
+    background: hsl(150 60% 90%);
+  }
   
   .text-balance {
     text-wrap: balance;
