@@ -326,7 +326,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {howItWorks.map((step, index) => (
               <div key={index} className="relative">
                 <div className="bg-white rounded-2xl p-6 shadow-sm border border-mint-light/50 hover:shadow-md transition-shadow">
@@ -337,7 +337,7 @@ export default function Home() {
                   <p className="text-muted-foreground">{step.description}</p>
                 </div>
                 {index < howItWorks.length - 1 && (
-                  <ArrowRight className="hidden lg:block absolute top-1/2 -right-4 -translate-y-1/2 w-8 h-8 text-mint-medium" />
+                  <ArrowRight className="hidden lg:block absolute top-1/2 left-full -translate-x-1/2 ml-[-1.5rem] -translate-y-1/2 w-6 h-6 text-mint-medium" />
                 )}
               </div>
             ))}
@@ -431,9 +431,11 @@ export default function Home() {
             <Button size="lg" className="gradient-mint border-0 hover:opacity-90 transition-opacity text-lg px-8 py-6">
               Join the iOS beta
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-mint-medium hover:bg-mint-light/20">
-              Contact support
-            </Button>
+            <Link href="/contact">
+              <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-mint-medium hover:bg-mint-light/20">
+                Contact support
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
