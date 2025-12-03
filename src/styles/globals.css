@@ -89,37 +89,9 @@
     text-wrap: balance;
   }
 
-  /* Smooth section transitions */
-  .section-fade-top {
+  /* Smooth section transition from mint to white */
+  .section-mint-fade-bottom {
     position: relative;
-  }
-  
-  .section-fade-top::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    background: linear-gradient(to bottom, hsl(0 0% 100%), transparent);
-    pointer-events: none;
-    z-index: 1;
-  }
-
-  .section-fade-bottom {
-    position: relative;
-  }
-  
-  .section-fade-bottom::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    background: linear-gradient(to top, hsl(var(--mint-light)), transparent);
-    pointer-events: none;
-    z-index: 1;
   }
 
   .section-mint-fade-bottom::after {
@@ -132,10 +104,5 @@
     background: linear-gradient(to top, hsl(0 0% 100%), transparent);
     pointer-events: none;
     z-index: 1;
-  }
-
-  /* Safe area for iOS devices */
-  .safe-area-bottom {
-    padding-bottom: env(safe-area-inset-bottom, 0px);
   }
 }
