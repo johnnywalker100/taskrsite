@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Taskr</title>
+    <meta
+      name="description"
+      content="Taskr keeps your family on top of chores with real-time updates."
+    />
+    <style>
+      :root {
+        color-scheme: light dark;
+      }
+
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #f8fafc;
+        color: #0f172a;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+      }
+
+      main {
+        max-width: 480px;
+        width: 100%;
+        background: #ffffff;
+        border-radius: 1.5rem;
+        box-shadow: 0 25px 70px rgba(15, 23, 42, 0.15);
+        border: 1px solid rgba(15, 23, 42, 0.05);
+        text-align: center;
+        padding: 2.5rem 2rem;
+      }
+
+      h1 {
+        margin: 0 0 0.75rem;
+        font-size: 1.5rem;
+      }
+
+      p {
+        margin: 0 0 1.5rem;
+        color: #475569;
+        line-height: 1.5;
+      }
+
+      a {
+        color: #0d9488;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .spinner {
+        width: 48px;
+        height: 48px;
+        border-radius: 999px;
+        border: 4px solid rgba(14, 165, 233, 0.25);
+        border-top-color: #0d9488;
+        margin: 0 auto 1.5rem auto;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="spinner" aria-hidden="true"></div>
+      <h1>Loading Taskr...</h1>
+      <p>
+        Redirecting you to the main experience. If nothing happens automatically,
+        <a href="/">tap here</a>.
+      </p>
+    </main>
+    <script>
+      setTimeout(function () {
+        if (window.location.pathname === "/index.html") {
+          window.location.replace("/");
+        }
+      }, 100);
+    </script>
+  </body>
+</html>
