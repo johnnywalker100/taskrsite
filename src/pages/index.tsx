@@ -1,5 +1,5 @@
 
-import { CheckCircle2, Calendar, Bell, Sparkles, Shield, Smile, ArrowRight, Apple, Star, Menu, X, Lock, Smartphone, ListChecks } from "lucide-react";
+import { CheckCircle2, Calendar, Bell, Sparkles, Shield, Smile, ArrowRight, Menu, X, Lock, Smartphone, ListChecks, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -33,8 +33,13 @@ export default function Home() {
     },
     {
       icon: Shield,
-      title: "Secure and private",
-      description: "Uses Apple’s approved Family Controls framework—nothing is tracked or sold."
+      title: "Built on Apple Family Controls",
+      description: "Uses Apple's Screen Time APIs so you stay in control without extra hardware."
+    },
+    {
+      icon: Users,
+      title: "Private to your family",
+      description: "Your tasks and data stay in your family. We do not sell or share your information."
     }
   ];
 
@@ -112,31 +117,14 @@ export default function Home() {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Sarah M.",
-      role: "Mom of 3",
-      content: "Taskr has completely changed how our household runs. No more nagging about chores!",
-      rating: 5
-    },
-    {
-      name: "Michael T.",
-      role: "Dad of 2",
-      content: "My kids actually enjoy checking off their tasks. The interface is so simple and fun.",
-      rating: 5
-    },
-    {
-      name: "Jennifer K.",
-      role: "Parent",
-      content: "Finally, a task app that works for the whole family. Worth every penny.",
-      rating: 5
-    }
-  ];
-
   const faqs = [
     {
       question: "Is Taskr really free?",
-      answer: "Yes! Our free plan includes up to 3 family members and 10 active tasks, perfect for small families getting started."
+      answer: "During our beta, Taskr is completely free. We plan to offer a free plan and a simple paid plan once we launch publicly."
+    },
+    {
+      question: "Does Taskr control Screen Time?",
+      answer: "Yes. Taskr uses Apple's Screen Time APIs (Family Controls) to apply app limits when tasks are due and unlock them when tasks are completed."
     },
     {
       question: "How do kids access their tasks?",
@@ -151,12 +139,8 @@ export default function Home() {
       answer: "Taskr works great for kids ages 5 and up. Younger kids may need parent help reading tasks, while older kids can use it independently."
     },
     {
-      question: "Can I cancel anytime?",
-      answer: "Yes, you can cancel your subscription anytime. Your data remains accessible until the end of your billing period."
-    },
-    {
       question: "Is my family's data secure?",
-      answer: "Absolutely. We use industry-standard encryption and never share your family's information with third parties."
+      answer: "Absolutely. We use industry-standard encryption and never share your family's information with third parties. Everything runs through Apple's approved Family Controls."
     }
   ];
 
@@ -184,7 +168,9 @@ export default function Home() {
               <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Features</a>
               <a href="#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors">How It Works</a>
               <a href="#faq" className="text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
-              <Button className="gradient-mint border-0 hover:opacity-90 transition-opacity">Get Started</Button>
+              <a href="#early-access">
+                <Button className="gradient-mint border-0 hover:opacity-90 transition-opacity">Join beta</Button>
+              </a>
             </div>
 
             <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -199,7 +185,9 @@ export default function Home() {
               <a href="#features" className="block py-2 text-muted-foreground hover:text-foreground transition-colors">Features</a>
               <a href="#how-it-works" className="block py-2 text-muted-foreground hover:text-foreground transition-colors">How It Works</a>
               <a href="#faq" className="block py-2 text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
-              <Button className="w-full gradient-mint border-0 hover:opacity-90 transition-opacity">Get Started</Button>
+              <a href="#early-access" className="block">
+                <Button className="w-full gradient-mint border-0 hover:opacity-90 transition-opacity">Join beta</Button>
+              </a>
             </div>
           </div>
         )}
@@ -215,25 +203,28 @@ export default function Home() {
           <div className="text-center max-w-4xl mx-auto">
             <Badge className="mb-6 gradient-mint border-0 text-white px-4 py-1">
               <Sparkles className="w-3 h-3 mr-1" />
-              Now Available on iOS
+              iOS beta coming soon
             </Badge>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6 text-balance">
               Turn chores into <span className="text-mint-dark">clear, simple tasks</span> for your kids
             </h1>
             <p className="text-xl sm:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto text-balance">
-              Taskr connects to Apple Screen Time so apps lock automatically when chores are due—and unlock the moment you approve completed tasks.
+              Assign chores, set limits, and automatically block apps when it's time to get things done.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="gradient-mint border-0 hover:opacity-90 transition-opacity text-lg px-8 py-6">
-                <Apple className="w-5 h-5 mr-2" />
-                Download on App Store
-              </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-mint-medium hover:bg-mint-light/20">
-                Sign Up Free
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
+              <a href="#early-access">
+                <Button size="lg" className="gradient-mint border-0 hover:opacity-90 transition-opacity text-lg px-8 py-6">
+                  Join the iOS beta
+                </Button>
+              </a>
+              <a href="#early-access">
+                <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-mint-medium hover:bg-mint-light/20">
+                  Get early access
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </a>
             </div>
-            <p className="text-sm text-muted-foreground mt-6">Free forever plan available. No credit card required.</p>
+            <p className="text-sm text-muted-foreground mt-6">Built with Apple's Screen Time APIs for iOS families.</p>
           </div>
         </div>
       </section>
@@ -347,44 +338,11 @@ export default function Home() {
           </div>
 
           <div className="mt-16 text-center">
-            <Button size="lg" className="gradient-mint border-0 hover:opacity-90 transition-opacity">
-              Start Your Free Trial
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      <section id="testimonials" className="py-20 lg:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 bg-mint-light text-mint-dark">Testimonials</Badge>
-            <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">Loved by Families Everywhere</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              See what parents are saying about Taskr.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="border-mint-light/50">
-                <CardHeader>
-                  <div className="flex gap-1 mb-3">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-mint-medium text-mint-medium" />
-                    ))}
-                  </div>
-                  <CardDescription className="text-base text-foreground italic">
-                    "{testimonial.content}"
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div>
-                    <p className="font-semibold text-foreground">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+            <a href="#early-access">
+              <Button size="lg" className="gradient-mint border-0 hover:opacity-90 transition-opacity">
+                Join the iOS beta
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -457,19 +415,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="py-20 lg:py-32 gradient-mint-soft">
+      <section id="early-access" className="py-20 lg:py-32 gradient-mint-soft">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">Ready to Transform Your Family's Routine?</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">Join Early Families Testing Taskr</h2>
           <p className="text-xl text-muted-foreground mb-10">
-            Join thousands of families who have simplified their household management with Taskr.
+            Join early families testing Taskr and help shape how Screen Time and chores work together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button size="lg" className="gradient-mint border-0 hover:opacity-90 transition-opacity text-lg px-8 py-6">
-              <Apple className="w-5 h-5 mr-2" />
-              Download Now
+              Join the iOS beta
             </Button>
             <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-mint-medium hover:bg-mint-light/20">
-              Contact Support
+              Contact support
             </Button>
           </div>
         </div>
@@ -486,7 +443,7 @@ export default function Home() {
                 <span className="text-xl font-bold">Taskr</span>
               </div>
               <p className="text-sm text-muted-foreground">
-                Making family task management simple and fun.
+                Making family tasks and Screen Time management simple.
               </p>
             </div>
 
@@ -499,11 +456,10 @@ export default function Home() {
             </div>
 
             <div>
-              <h3 className="font-semibold mb-4">Company</h3>
+              <h3 className="font-semibold mb-4">Get in Touch</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-foreground transition-colors">About Us</a></li>
-                <li><a href="#contact" className="hover:text-foreground transition-colors">Contact</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">Blog</a></li>
+                <li><a href="#early-access" className="hover:text-foreground transition-colors">Join Beta</a></li>
+                <li><a href="#early-access" className="hover:text-foreground transition-colors">Contact</a></li>
               </ul>
             </div>
 

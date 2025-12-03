@@ -47,7 +47,7 @@ export default function PrivacyPolicy() {
             <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
               <li>Name and email address</li>
               <li>Phone number (optional)</li>
-              <li>Payment information (processed securely through Apple Pay)</li>
+              <li>Payment information (when paid plans become available, processed securely through Apple Pay)</li>
               <li>Profile information you choose to provide</li>
             </ul>
 
@@ -73,7 +73,7 @@ export default function PrivacyPolicy() {
             </p>
             <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
               <li>Provide, maintain, and improve our Service</li>
-              <li>Process your transactions and manage your subscriptions</li>
+              <li>Process transactions and manage subscriptions (when paid plans become available)</li>
               <li>Send you notifications about tasks and updates</li>
               <li>Respond to your comments, questions, and provide customer support</li>
               <li>Monitor and analyze usage and trends to improve user experience</li>

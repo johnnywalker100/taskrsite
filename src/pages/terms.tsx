@@ -77,23 +77,23 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-semibold mb-4">5. Subscription and Payment</h2>
             <p className="text-muted-foreground mb-3">
-              Some parts of the Service are billed on a subscription basis. You will be billed in advance on a recurring and periodic basis. Billing cycles are set on a monthly basis.
+              During our beta period, Taskr is free to use. In the future, some parts of the Service may be billed on a subscription basis.
             </p>
             <p className="text-muted-foreground mb-3">
-              At the end of each billing cycle, your subscription will automatically renew unless you cancel it or we cancel it. You may cancel your subscription renewal through your account settings or by contacting our support team.
+              When paid plans become available, billing cycles will be set on a monthly basis. You will be able to cancel your subscription renewal through your account settings or by contacting our support team.
             </p>
             <p className="text-muted-foreground">
-              A valid payment method, including credit card or Apple Pay, is required to process the payment for your subscription. You agree to provide current, complete, and accurate purchase and account information.
+              If and when payment is required, a valid payment method, including credit card or Apple Pay, will be needed to process payments. You agree to provide current, complete, and accurate purchase and account information.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">6. Free Trial</h2>
+            <h2 className="text-2xl font-semibold mb-4">6. Beta Access</h2>
             <p className="text-muted-foreground mb-3">
-              Taskr may offer a free trial subscription for a limited period. You may be required to enter your billing information in order to sign up for the free trial.
+              Taskr is currently in beta. During the beta period, the Service is provided free of charge to early users.
             </p>
             <p className="text-muted-foreground">
-              If you do enter your billing information when signing up for the free trial, you will not be charged until the free trial has expired. On the last day of the free trial period, unless you cancelled your subscription, you will be automatically charged the applicable subscription fee.
+              We may offer free trials or promotional periods when paid plans launch. Details about pricing and trial terms will be clearly communicated before any charges apply.
             </p>
           </section>
 
