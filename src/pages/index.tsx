@@ -337,7 +337,7 @@ export default function Home() {
                   <p className="text-muted-foreground">{step.description}</p>
                 </div>
                 {index < howItWorks.length - 1 && (
-                  <ArrowRight className="hidden lg:block absolute top-1/2 left-full -translate-x-1/2 ml-[-1.5rem] -translate-y-1/2 w-6 h-6 text-mint-medium" />
+                  <ArrowRight className="hidden lg:block absolute top-1/2 left-full translate-x-1/2 -translate-y-1/2 ml-6 w-6 h-6 text-mint-medium" />
                 )}
               </div>
             ))}
@@ -431,11 +431,9 @@ export default function Home() {
             <Button size="lg" className="gradient-mint border-0 hover:opacity-90 transition-opacity text-lg px-8 py-6">
               Join the iOS beta
             </Button>
-            <Link href="/contact">
-              <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-mint-medium hover:bg-mint-light/20">
-                Contact support
-              </Button>
-            </Link>
+            <Button asChild size="lg" variant="outline" className="text-lg px-8 py-6 border-mint-medium hover:bg-mint-light/20">
+              <Link href="/contact">Contact support</Link>
+            </Button>
           </div>
         </div>
       </section>
