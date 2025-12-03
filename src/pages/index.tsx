@@ -353,9 +353,13 @@ export default function Home() {
           </div>
 
           <div className="mt-16 text-center">
-            <a href="#early-access">
+            <a
+              href="https://support.apple.com/en-us/HT208982"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Button size="lg" className="gradient-mint border-0 hover:opacity-90 transition-opacity">
-                Join the iOS beta
+                Setup guide
               </Button>
             </a>
           </div>
