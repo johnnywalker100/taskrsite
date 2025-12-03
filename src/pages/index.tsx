@@ -1,5 +1,5 @@
 
-import { CheckCircle2, Calendar, Bell, Sparkles, Shield, Smile, ArrowRight, Menu, X, Lock, Smartphone, ListChecks, Users } from "lucide-react";
+import { CheckCircle2, Calendar, Bell, Sparkles, Shield, Smile, ArrowRight, Menu, X, Lock, Smartphone, ListChecks, Users, Camera } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -14,22 +14,27 @@ export default function Home() {
     {
       icon: Lock,
       title: "Tasks that actually get done",
-      description: "Apps pause until chores are finished, so kids stay focused and motivated."
+      description: "When tasks go overdue, Taskr pauses the apps you chose until you approve the task, so kids hustle to stay ahead of deadlines."
+    },
+    {
+      icon: Camera,
+      title: "Photo proof and approvals",
+      description: "Kids snap a quick photo of the chore, you approve or reject it, and Taskr updates Screen Time instantly based on your decision."
     },
     {
       icon: Calendar,
       title: "Smart Screen Time rules",
-      description: "Create limits that turn on automatically during homework, chores, or bedtime."
+      description: "Create rules that only kick in when a task misses its due time, powered by Apple’s Family Controls."
     },
     {
       icon: Bell,
       title: "Real-time updates",
-      description: "See pending tasks and remaining Screen Time from one parent dashboard."
+      description: "See due times, overdue locks, and pending photo submissions from one parent dashboard."
     },
     {
       icon: Smile,
       title: "Kid-friendly interface",
-      description: "Simple checklists that tie directly to Screen Time permissions."
+      description: "Simple checklists that show what’s due now, what locks if it’s overdue, and how to send photo proof."
     },
     {
       icon: Shield,
@@ -46,38 +51,42 @@ export default function Home() {
   const howItWorks = [
     {
       step: "1",
-      title: "Add your kids",
-      description: "Connect each child’s device using Apple’s Family Controls in minutes."
+      title: "Create your parent account",
+      description: "Download Taskr, sign up as the parent, and set up your family inside the app."
     },
     {
       step: "2",
-      title: "Assign tasks",
-      description: "Add chores, homework, and reminders with due times that matter."
+      title: "Connect your kids’ devices",
+      description: "Use Apple’s Family Controls to connect each child’s iOS device and grant Taskr Screen Time access."
     },
     {
       step: "3",
-      title: "Choose Screen Time rules",
-      description: "Pick which apps pause when tasks are due—social, games, or the whole device."
+      title: "Create tasks with due times",
+      description: "Add chores and homework, set when they’re due, pick the apps to block if they go overdue, and require a quick photo as proof."
     },
     {
       step: "4",
-      title: "Kids complete tasks to unlock",
-      description: "Once tasks are approved, Screen Time restrictions lift instantly."
+      title: "Overdue tasks turn on Screen Time",
+      description: "If a task goes overdue, Taskr turns on Screen Time and blocks the apps you picked. Your child submits a photo, you approve or reject it, and Screen Time turns off when you approve."
     }
   ];
 
   const screenTimeHighlights = [
     {
       title: "Automatic app blocking",
-      description: "When tasks are due, selected apps lock automatically on your child’s device."
+      description: "When tasks go overdue, selected apps lock automatically on your child’s device."
     },
     {
-      title: "Unlocks when tasks are done",
-      description: "Kids check off tasks, you approve them, and Screen Time restrictions lift instantly."
+      title: "Photo proof + parent approval",
+      description: "Kids submit a photo when they finish a task. You review it, approve or reject it, and Screen Time restrictions lift only after your approval."
+    },
+    {
+      title: "Only locks when overdue",
+      description: "Apps stay available before the deadline. Taskr turns on Screen Time only if a task misses its due time."
     },
     {
       title: "Custom rules",
-      description: "Block social apps during homework hours or only unlock games after key tasks."
+      description: "Block social apps during homework hours or only let games return after you approve key tasks."
     },
     {
       title: "Granular control",
@@ -91,12 +100,12 @@ export default function Home() {
 
   const comparisonRows = [
     {
-      feature: "Task-based unlocking",
+      feature: "Parent-approved, task-based unlocking",
       apple: false,
       taskr: true
     },
     {
-      feature: "Automatic app blocking when chores are due",
+      feature: "Automatic app blocking when chores go overdue",
       apple: false,
       taskr: true
     },
@@ -124,11 +133,11 @@ export default function Home() {
     },
     {
       question: "Does Taskr control Screen Time?",
-      answer: "Yes. Taskr uses Apple's Screen Time APIs (Family Controls) to apply app limits when tasks are due and unlock them when tasks are completed."
+      answer: "Yes. Taskr uses Apple’s Screen Time APIs (Family Controls) to apply app limits when tasks go overdue. When a task is late, Taskr blocks the apps you chose on your child’s device. Your child submits a photo as proof, and once you approve it, Taskr turns those limits off."
     },
     {
       question: "How do kids access their tasks?",
-      answer: "Kids can download the Taskr app on their iOS device and log in with their profile. They'll see a simple, color-coded list of their tasks."
+      answer: "Kids download Taskr on their iOS device, log in with their profile, and see a simple, color-coded list of what’s due. When they finish, they submit a quick photo so you can approve or reject it."
     },
     {
       question: "Can I set recurring tasks?",
@@ -150,7 +159,7 @@ export default function Home() {
         <title>Taskr — Tasks and Screen Time Controls for Parents</title>
         <meta
           name="description"
-          content="Taskr lets parents assign tasks and automatically block apps with Apple’s Screen Time API. Kids complete tasks to unlock screen time. iOS only."
+          content="Taskr lets parents assign tasks with due times and only blocks apps when chores go overdue. Kids submit photo proof, you approve, and Screen Time unlocks."
         />
       </Head>
       <div className="min-h-screen">
@@ -215,7 +224,7 @@ export default function Home() {
               Turn chores into <span className="text-mint-dark">clear, simple tasks</span> for your kids
             </h1>
             <p className="text-xl sm:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto text-balance">
-              Assign chores, set limits, and automatically block apps when it's time to get things done.
+              Assign chores with due times. If they go overdue, Taskr turns on Screen Time and blocks selected apps until you approve the task.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href="#early-access">
@@ -237,7 +246,7 @@ export default function Home() {
 
       <section className="bg-white py-10 px-4 sm:px-6 lg:px-8">
         <p className="font-bold text-xl sm:text-2xl text-center max-w-4xl mx-auto text-balance">
-          No more nagging. Kids know exactly what to do, and their apps stay locked until they do it.
+          Kids know what’s due and what happens if they miss it—overdue tasks turn on Screen Time until you approve their work.
         </p>
       </section>
 
@@ -274,7 +283,7 @@ export default function Home() {
               <Badge className="mb-4 gradient-mint border-0 text-white">Screen Time</Badge>
               <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">Built-in Screen Time Controls</h2>
               <p className="text-xl text-muted-foreground mb-10">
-                A task app that can actually enforce tasks. Link chores to Screen Time rules and let Taskr lock or unlock apps for you.
+                A task app that actually enforces tasks. Link chores to Screen Time rules and let Taskr lock apps when they go overdue and unlock them after you approve the photo proof.
               </p>
               <div className="space-y-6">
                 {screenTimeHighlights.map((item, index) => (
@@ -297,7 +306,7 @@ export default function Home() {
                 <div className="rounded-2xl bg-gradient-to-b from-mint-light/40 to-white p-8 text-center border border-mint-light/50">
                   <Smartphone className="w-10 h-10 text-mint-dark mx-auto mb-4" />
                   <p className="text-2xl font-semibold text-foreground mb-2">Blocked by your parent</p>
-                  <p className="text-muted-foreground mb-6">until chores are finished.</p>
+                  <p className="text-muted-foreground mb-6">while this overdue task is still pending.</p>
                   <div className="rounded-xl border border-mint-light/60 bg-white px-4 py-3 text-left space-y-2">
                     <div className="flex items-center justify-between text-sm font-medium">
                       <span>Homework</span>
@@ -305,7 +314,7 @@ export default function Home() {
                     </div>
                     <div className="flex items-center gap-2 text-muted-foreground text-sm">
                       <ListChecks className="w-4 h-4" />
-                      <span>Apps unlock once this task is approved.</span>
+                      <span>Apps unlock once your parent approves the photo.</span>
                     </div>
                   </div>
                 </div>
