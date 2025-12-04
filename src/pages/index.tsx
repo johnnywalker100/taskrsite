@@ -295,7 +295,7 @@ export default function Home() {
                 Built-in Screen Time Controls
               </h2>
               <p className="text-base sm:text-xl text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
-                This is the parent dashboard on the Needs Review tab. Taskr links chores to Screen Time and shows what needs approval and what's currently overdue.
+                This is the parent dashboard. Taskr links chores to Screen Time and shows what needs approval and what's currently overdue.
               </p>
               <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
                 When a task goes overdue, the apps you selected are blocked. Kids submit a photo, it lands here, and you decide what happens next.
