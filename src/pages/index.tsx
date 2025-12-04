@@ -109,6 +109,9 @@ export default function Home() {
               <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Features</a>
               <a href="#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors">How It Works</a>
               <a href="#faq" className="text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
+              <Link href="/support" className="text-muted-foreground hover:text-foreground transition-colors font-medium">
+                Support
+              </Link>
               <Button className="bg-black text-white hover:bg-black/90 rounded-full px-6">
                 Download App
                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -127,6 +130,9 @@ export default function Home() {
               <a href="#features" className="block py-2 text-muted-foreground hover:text-foreground transition-colors">Features</a>
               <a href="#how-it-works" className="block py-2 text-muted-foreground hover:text-foreground transition-colors">How It Works</a>
               <a href="#faq" className="block py-2 text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
+              <Link href="/support" className="block py-2 text-muted-foreground hover:text-foreground transition-colors">
+                Support
+              </Link>
               <Button className="w-full bg-black text-white hover:bg-black/90 rounded-full">
                 Download App
                 <ArrowRight className="w-4 h-4 ml-2" />
