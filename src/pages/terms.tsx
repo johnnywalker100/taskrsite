@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { TaskrLogo } from "@/components/TaskrLogo";
+import { SiteFooter } from "@/components/SiteFooter";
 
 export default function TermsOfService() {
   return (
@@ -155,6 +156,7 @@ export default function TermsOfService() {
           </section>
         </div>
       </div>
+      <SiteFooter />
     </div>
   );
 }

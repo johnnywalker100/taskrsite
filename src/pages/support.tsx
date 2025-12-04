@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Mail, MessageSquare, Shield } from "lucide-react";
+import { ArrowLeft, Mail } from "lucide-react";
 import { TaskrLogo } from "@/components/TaskrLogo";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { SiteFooter } from "@/components/SiteFooter";
 
 const SUPPORT_EMAIL = "sebas@thetaskr.app";
 
@@ -46,6 +46,7 @@ export default function SupportPage() {
           </Button>
         </section>
       </main>
+      <SiteFooter />
     </div>
   );
 }

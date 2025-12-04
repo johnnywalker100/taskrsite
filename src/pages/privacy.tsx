@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { TaskrLogo } from "@/components/TaskrLogo";
+import { SiteFooter } from "@/components/SiteFooter";
 
 export default function PrivacyPolicy() {
   return (
@@ -214,6 +215,7 @@ export default function PrivacyPolicy() {
           </section>
         </div>
       </div>
+      <SiteFooter />
     </div>
   );
 }
