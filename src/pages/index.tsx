@@ -1,4 +1,4 @@
-import { CheckCircle2, Calendar, Bell, Users, Sparkles, TrendingUp, Clock, Shield, Smile, ArrowRight, Apple, Star, Menu, X } from "lucide-react";
+import { CheckCircle2, Calendar, Bell, Users, Sparkles, TrendingUp, Clock, Shield, Smile, ArrowRight, Apple, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -61,27 +61,6 @@ export default function Home() {
       step: "4",
       title: "Stay Updated",
       description: "Get real-time notifications and track household progress."
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah M.",
-      role: "Mom of 3",
-      content: "Taskr has completely changed how our household runs. No more nagging about chores!",
-      rating: 5
-    },
-    {
-      name: "Michael T.",
-      role: "Dad of 2",
-      content: "My kids actually enjoy checking off their tasks. The interface is so simple and fun.",
-      rating: 5
-    },
-    {
-      name: "Jennifer K.",
-      role: "Parent",
-      content: "Finally, a task app that works for the whole family. Worth every penny.",
-      rating: 5
     }
   ];
 
@@ -177,6 +156,48 @@ export default function Home() {
               <Button size="lg" className="bg-black text-white hover:bg-black/90 rounded-full text-lg px-8 py-6">
                 Get it on Google Play
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="create-tasks" className="py-20 lg:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <Badge className="mb-4 bg-mint-light/50 text-mint-dark border-0 px-4 py-1 rounded-full">
+                Create Tasks Easily
+              </Badge>
+              <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
+                Capture every detail in seconds.
+              </h2>
+              <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
+                Add chores, give extra context, pick who is responsible, and set the perfect due date without leaving this simple screen. Parents see everything, kids know exactly what to do.
+              </p>
+              <ul className="space-y-4 text-lg text-foreground">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-mint-dark mt-1" />
+                  <span>Task name, details, and due date all in one clean flow.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Users className="w-6 h-6 text-mint-dark mt-1" />
+                  <span>Assign tasks to the right kid with one tap.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Bell className="w-6 h-6 text-mint-dark mt-1" />
+                  <span>Automatic reminders keep everything moving.</span>
+                </li>
+              </ul>
+            </div>
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-mint-light/30 to-transparent blur-3xl -z-10"></div>
+              <div className="glass rounded-[40px] p-6 border border-white/40 shadow-2xl">
+                <img
+                  src="/IMG_1561.PNG"
+                  alt="Taskr create task mockup on iPhone"
+                  className="w-full h-auto object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -290,40 +311,6 @@ export default function Home() {
                   <p className="text-muted-foreground leading-relaxed">{step.description}</p>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="testimonials" className="py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">Loved by Families Everywhere</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              See what parents are saying about Taskr.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="glass border-white/40">
-                <CardHeader>
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-mint-medium text-mint-medium" />
-                    ))}
-                  </div>
-                  <CardDescription className="text-base text-foreground italic leading-relaxed">
-                    "{testimonial.content}"
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div>
-                    <p className="font-semibold text-foreground">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                  </div>
-                </CardContent>
-              </Card>
             ))}
           </div>
         </div>
