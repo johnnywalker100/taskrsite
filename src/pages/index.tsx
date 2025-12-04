@@ -57,7 +57,7 @@ export default function Home() {
     },
     {
       feature: "Runs on Apple-approved Family Controls",
-      taskr: "Built entirely on Apple's Screen Time APIs for iOS families.",
+      taskr: "Built entirely on Apple Screen Time for iOS families.",
       screenTime: "Apple's own Screen Time settings.",
       taskrHas: true,
       screenTimeHas: true
@@ -156,9 +156,6 @@ export default function Home() {
                 Join the iOS beta
               </Button>
             </div>
-            <p className="text-sm text-muted-foreground mt-6">
-              Built for iOS families using Apple's Screen Time APIs.
-            </p>
             <p className="text-base text-muted-foreground mt-3">
               Get early access and help shape Taskr.
             </p>
