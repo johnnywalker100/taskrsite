@@ -2,18 +2,26 @@ import { CheckCircle2, Sparkles, Clock, Shield, ArrowRight, Apple, Menu, X } fro
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import { TaskrLogo } from "@/components/TaskrLogo";
 import { SiteFooter } from "@/components/SiteFooter";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const scrollPosOnOpen = useRef<number>(0);
 
-  // Close mobile menu when scrolling
+  // Track scroll position when menu opens and close on significant scroll
   useEffect(() => {
+    if (!mobileMenuOpen) return;
+
+    // Store the scroll position when menu opens
+    scrollPosOnOpen.current = window.scrollY;
+
     const handleScroll = () => {
-      if (mobileMenuOpen) {
+      // Only close if user scrolled more than 50px from where they opened the menu
+      const scrollDelta = Math.abs(window.scrollY - scrollPosOnOpen.current);
+      if (scrollDelta > 50) {
         setMobileMenuOpen(false);
       }
     };
