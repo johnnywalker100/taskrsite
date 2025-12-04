@@ -2,13 +2,42 @@ import { CheckCircle2, Sparkles, Clock, Shield, ArrowRight, Apple, Menu, X } fro
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { TaskrLogo } from "@/components/TaskrLogo";
 import { SiteFooter } from "@/components/SiteFooter";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Close mobile menu when scrolling
+  useEffect(() => {
+    const handleScroll = () => {
+      if (mobileMenuOpen) {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [mobileMenuOpen]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
+  // Close menu helper
+  const closeMenu = useCallback(() => {
+    setMobileMenuOpen(false);
+  }, []);
 
   const howItWorks = [
     {
@@ -93,7 +122,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen gradient-page">
-      <nav className="sticky top-0 z-50 border-b border-white/20">
+      <nav className={`sticky top-0 z-50 border-b border-white/20 ${mobileMenuOpen ? 'bg-white/95 backdrop-blur-md' : ''}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
@@ -121,20 +150,29 @@ export default function Home() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-white/20 bg-white/30">
-            <div className="px-4 py-4 space-y-3">
-              <a href="#features" className="block py-2 text-muted-foreground hover:text-foreground transition-colors">Features</a>
-              <a href="#how-it-works" className="block py-2 text-muted-foreground hover:text-foreground transition-colors">How It Works</a>
-              <a href="#faq" className="block py-2 text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
-              <Link href="/support" className="block py-2 text-muted-foreground hover:text-foreground transition-colors">
-                Support
-              </Link>
-              <Button className="w-full bg-black text-white hover:bg-black/90 rounded-full">
-                Join the iOS beta
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
+          <>
+            {/* Backdrop overlay - click to close */}
+            <div 
+              className="md:hidden fixed inset-0 top-16 bg-black/20 z-40"
+              onClick={closeMenu}
+              aria-hidden="true"
+            />
+            {/* Menu content */}
+            <div className="md:hidden border-t border-white/20 bg-white/95 backdrop-blur-md relative z-50">
+              <div className="px-4 py-4 space-y-3">
+                <a href="#features" onClick={closeMenu} className="block py-2 text-muted-foreground hover:text-foreground transition-colors">Features</a>
+                <a href="#how-it-works" onClick={closeMenu} className="block py-2 text-muted-foreground hover:text-foreground transition-colors">How It Works</a>
+                <a href="#faq" onClick={closeMenu} className="block py-2 text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
+                <Link href="/support" onClick={closeMenu} className="block py-2 text-muted-foreground hover:text-foreground transition-colors">
+                  Support
+                </Link>
+                <Button onClick={closeMenu} className="w-full bg-black text-white hover:bg-black/90 rounded-full">
+                  Join the iOS beta
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </div>
             </div>
-          </div>
+          </>
         )}
       </nav>
 

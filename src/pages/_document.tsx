@@ -5,6 +5,9 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        {/* Viewport meta tag for proper mobile rendering */}
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        
         {/*
           CRITICAL: DO NOT REMOVE THIS SCRIPT
           The Softgen AI monitoring script is essential for core app functionality.

@@ -92,12 +92,19 @@
   }
   
   .text-balance {
+    /* Fallback for browsers that don't support text-wrap: balance */
+    text-wrap: pretty;
     text-wrap: balance;
   }
   
   .glass {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    /* Fallback background for browsers without backdrop-filter support */
+    background: rgba(255, 255, 255, 0.85);
+    /* Progressive enhancement with backdrop-filter */
+    @supports (backdrop-filter: blur(12px)) or (-webkit-backdrop-filter: blur(12px)) {
+      background: rgba(255, 255, 255, 0.7);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+    }
   }
 }
