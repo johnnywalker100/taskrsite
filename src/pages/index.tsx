@@ -383,45 +383,83 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="glass rounded-2xl sm:rounded-3xl border border-white/40 overflow-hidden">
-            <table className="w-full text-left table-fixed">
+          {/* Desktop table view */}
+          <div className="hidden md:block glass rounded-3xl border border-white/40 overflow-hidden">
+            <table className="w-full text-left">
               <thead className="bg-white/10">
                 <tr>
-                  <th className="py-2 sm:py-4 px-2 sm:px-6 text-[10px] sm:text-sm font-semibold text-muted-foreground uppercase tracking-wider text-left w-[30%]">Feature</th>
-                  <th className="py-2 sm:py-4 px-2 sm:px-6 text-[10px] sm:text-sm font-semibold text-muted-foreground uppercase tracking-wider text-left w-[35%]">Taskr</th>
-                  <th className="py-2 sm:py-4 px-2 sm:px-6 text-[10px] sm:text-sm font-semibold text-muted-foreground uppercase tracking-wider text-left w-[35%]">Screen Time</th>
+                  <th className="py-4 px-6 text-sm font-semibold text-muted-foreground uppercase tracking-wider text-left">Feature</th>
+                  <th className="py-4 px-6 text-sm font-semibold text-muted-foreground uppercase tracking-wider text-left">Taskr</th>
+                  <th className="py-4 px-6 text-sm font-semibold text-muted-foreground uppercase tracking-wider text-left">Standard Screen Time</th>
                 </tr>
               </thead>
               <tbody>
                 {comparisonRows.map((row, index) => (
                   <tr key={row.feature} className={index !== 0 ? "border-t border-white/20" : ""}>
-                    <td className="py-3 sm:py-6 px-2 sm:px-6 align-top">
-                      <p className="font-semibold text-foreground text-xs sm:text-base leading-tight">{row.feature}</p>
+                    <td className="py-6 px-6 align-top">
+                      <p className="font-semibold text-foreground">{row.feature}</p>
                     </td>
-                    <td className="py-3 sm:py-6 px-2 sm:px-6 align-top">
-                      <div className="flex items-start gap-1 sm:gap-3">
+                    <td className="py-6 px-6 align-top">
+                      <div className="flex items-start gap-3">
                         {row.taskrHas ? (
-                          <CheckCircle2 className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-mint-dark mt-0.5 flex-shrink-0" />
+                          <CheckCircle2 className="w-5 h-5 text-mint-dark mt-1" />
                         ) : (
-                          <X className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-muted-foreground mt-0.5 flex-shrink-0" />
+                          <X className="w-5 h-5 text-muted-foreground mt-1" />
                         )}
-                        <p className="text-muted-foreground text-xs sm:text-base leading-tight">{row.taskr}</p>
+                        <p className="text-muted-foreground">{row.taskr}</p>
                       </div>
                     </td>
-                    <td className="py-3 sm:py-6 px-2 sm:px-6 align-top">
-                      <div className="flex items-start gap-1 sm:gap-3">
+                    <td className="py-6 px-6 align-top">
+                      <div className="flex items-start gap-3">
                         {row.screenTimeHas ? (
-                          <CheckCircle2 className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-mint-dark mt-0.5 flex-shrink-0" />
+                          <CheckCircle2 className="w-5 h-5 text-mint-dark mt-1" />
                         ) : (
-                          <X className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-muted-foreground mt-0.5 flex-shrink-0" />
+                          <X className="w-5 h-5 text-muted-foreground mt-1" />
                         )}
-                        <p className="text-muted-foreground text-xs sm:text-base leading-tight">{row.screenTime}</p>
+                        <p className="text-muted-foreground">{row.screenTime}</p>
                       </div>
                     </td>
                   </tr>
                 ))}
               </tbody>
             </table>
+          </div>
+
+          {/* Mobile card view */}
+          <div className="md:hidden space-y-4">
+            {comparisonRows.map((row) => (
+              <div key={row.feature} className="glass rounded-2xl border border-white/40 p-5">
+                <h3 className="font-semibold text-foreground text-lg mb-4">{row.feature}</h3>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-20">
+                      <span className="text-xs font-semibold text-mint-dark uppercase tracking-wide">Taskr</span>
+                    </div>
+                    <div className="flex items-start gap-2 flex-1">
+                      {row.taskrHas ? (
+                        <CheckCircle2 className="w-4 h-4 text-mint-dark mt-0.5 flex-shrink-0" />
+                      ) : (
+                        <X className="w-4 h-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+                      )}
+                      <p className="text-sm text-muted-foreground">{row.taskr}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-20">
+                      <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">Screen Time</span>
+                    </div>
+                    <div className="flex items-start gap-2 flex-1">
+                      {row.screenTimeHas ? (
+                        <CheckCircle2 className="w-4 h-4 text-mint-dark mt-0.5 flex-shrink-0" />
+                      ) : (
+                        <X className="w-4 h-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+                      )}
+                      <p className="text-sm text-muted-foreground">{row.screenTime}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
