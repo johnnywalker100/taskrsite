@@ -9,7 +9,7 @@ export function SiteFooter() {
           <div className="col-span-2 sm:col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-3 sm:mb-4">
               <TaskrLogo className="w-7 h-7 sm:w-8 sm:h-8" />
-              <span className="text-lg sm:text-xl font-bold">Taskr</span>
+              <span className="text-lg sm:text-xl font-bold">taskr</span>
             </div>
             <p className="text-xs sm:text-sm text-muted-foreground">
               Connecting chores to Apple's Screen Time so kids earn device access.
@@ -61,7 +61,7 @@ export function SiteFooter() {
         </div>
 
         <div className="border-t border-white/40 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-muted-foreground">
-          <p>© 2025 Taskr. All rights reserved.</p>
+          <p>© 2025 taskr. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -14,7 +14,7 @@ export default function SupportPage() {
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center gap-2">
               <TaskrLogo className="w-10 h-10" />
-              <span className="text-2xl font-bold text-foreground">Taskr</span>
+              <span className="text-2xl font-bold text-foreground">taskr</span>
             </Link>
             <Link href="/">
               <Button variant="ghost" className="rounded-full">
@@ -32,9 +32,9 @@ export default function SupportPage() {
             <p className="inline-flex items-center px-4 py-1 rounded-full bg-mint-light/60 text-mint-dark text-sm font-semibold">
               Need help?
             </p>
-            <h1 className="text-4xl sm:text-5xl font-bold text-foreground">Contact Taskr Support</h1>
+            <h1 className="text-4xl sm:text-5xl font-bold text-foreground">Contact taskr Support</h1>
             <p className="text-lg text-muted-foreground">
-              The fastest way to reach us is by email. We read every message from families using Taskr.
+              The fastest way to reach us is by email. We read every message from families using taskr.
             </p>
           </div>
 

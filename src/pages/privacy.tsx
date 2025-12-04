@@ -12,7 +12,7 @@ export default function PrivacyPolicy() {
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center gap-2">
               <TaskrLogo className="w-10 h-10" />
-              <span className="text-2xl font-bold text-foreground">Taskr</span>
+              <span className="text-2xl font-bold text-foreground">taskr</span>
             </Link>
             <Link href="/">
               <Button variant="ghost">
@@ -32,7 +32,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
             <p className="text-muted-foreground">
-              Welcome to Taskr. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our app and tell you about your privacy rights and how the law protects you.
+              Welcome to taskr. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our app and tell you about your privacy rights and how the law protects you.
             </p>
           </section>
 
@@ -84,7 +84,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-semibold mb-4">4. Children's Privacy</h2>
             <p className="text-muted-foreground mb-3">
-              Taskr is designed for family use, including children. We take children's privacy seriously and comply with the Children's Online Privacy Protection Act (COPPA).
+              taskr is designed for family use, including children. We take children's privacy seriously and comply with the Children's Online Privacy Protection Act (COPPA).
             </p>
             <p className="text-muted-foreground mb-3">
               We require verifiable parental consent before collecting, using, or disclosing personal information from children under 13. Parents can:
@@ -166,7 +166,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-semibold mb-4">10. Third-Party Services</h2>
             <p className="text-muted-foreground mb-3">
-              Our Service may contain links to third-party websites or services that are not owned or controlled by Taskr. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
+              Our Service may contain links to third-party websites or services that are not owned or controlled by taskr. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
             </p>
             <p className="text-muted-foreground">
               We strongly advise you to review the Privacy Policy of every site you visit.

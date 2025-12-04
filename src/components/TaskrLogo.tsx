@@ -9,7 +9,7 @@ export function TaskrLogo({ className = "w-8 h-8" }: TaskrLogoProps) {
   return (
     <Image
       src="/ChatGPT_Image_Dec_4__2025__12_21_24_AM-removebg-preview.png"
-      alt="Taskr logo"
+      alt="taskr logo"
       width={200}
       height={200}
       className={cn("rounded-xl", className)}

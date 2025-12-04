@@ -12,7 +12,7 @@ export default function TermsOfService() {
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center gap-2">
               <TaskrLogo className="w-10 h-10" />
-              <span className="text-2xl font-bold text-foreground">Taskr</span>
+              <span className="text-2xl font-bold text-foreground">taskr</span>
             </Link>
             <Link href="/">
               <Button variant="ghost">
@@ -32,19 +32,19 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-semibold mb-4">1. Acceptance of Terms</h2>
             <p className="text-muted-foreground">
-              By accessing or using Taskr, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using this service.
+              By accessing or using taskr, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using this service.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-semibold mb-4">2. Use License</h2>
             <p className="text-muted-foreground mb-3">
-              Permission is granted to temporarily download one copy of Taskr for personal, non-commercial use only. This is the grant of a license, not a transfer of title, and under this license you may not:
+              Permission is granted to temporarily download one copy of taskr for personal, non-commercial use only. This is the grant of a license, not a transfer of title, and under this license you may not:
             </p>
             <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
               <li>Modify or copy the materials</li>
               <li>Use the materials for any commercial purpose or for any public display</li>
-              <li>Attempt to decompile or reverse engineer any software contained in Taskr</li>
+              <li>Attempt to decompile or reverse engineer any software contained in taskr</li>
               <li>Remove any copyright or other proprietary notations from the materials</li>
               <li>Transfer the materials to another person or mirror the materials on any other server</li>
             </ul>
@@ -63,7 +63,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-semibold mb-4">4. Family Accounts and Child Safety</h2>
             <p className="text-muted-foreground mb-3">
-              Taskr allows parents to create accounts for their children. By creating child accounts, you:
+              taskr allows parents to create accounts for their children. By creating child accounts, you:
             </p>
             <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
               <li>Confirm you are the parent or legal guardian of the child</li>
@@ -89,7 +89,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-semibold mb-4">6. Free Trial</h2>
             <p className="text-muted-foreground mb-3">
-              Taskr may offer a free trial subscription for a limited period. You may be required to enter your billing information in order to sign up for the free trial.
+              taskr may offer a free trial subscription for a limited period. You may be required to enter your billing information in order to sign up for the free trial.
             </p>
             <p className="text-muted-foreground">
               If you do enter your billing information when signing up for the free trial, you will not be charged until the free trial has expired. On the last day of the free trial period, unless you cancelled your subscription, you will be automatically charged the applicable subscription fee.
@@ -109,13 +109,13 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-semibold mb-4">8. Prohibited Uses</h2>
             <p className="text-muted-foreground mb-3">
-              You may not use Taskr:
+              You may not use taskr:
             </p>
             <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
               <li>In any way that violates any applicable national or international law or regulation</li>
               <li>To exploit, harm, or attempt to exploit or harm minors in any way</li>
               <li>To transmit any advertising or promotional material, including spam</li>
-              <li>To impersonate or attempt to impersonate Taskr, a Taskr employee, another user, or any other person or entity</li>
+              <li>To impersonate or attempt to impersonate taskr, a taskr employee, another user, or any other person or entity</li>
               <li>To engage in any other conduct that restricts or inhibits anyone's use or enjoyment of the Service</li>
             </ul>
           </section>
@@ -123,7 +123,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-semibold mb-4">9. Limitation of Liability</h2>
             <p className="text-muted-foreground">
-              In no event shall Taskr or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use Taskr, even if Taskr or an authorized representative has been notified orally or in writing of the possibility of such damage.
+              In no event shall taskr or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use taskr, even if taskr or an authorized representative has been notified orally or in writing of the possibility of such damage.
             </p>
           </section>
 

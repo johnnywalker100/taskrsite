@@ -19,7 +19,7 @@ export default function Home() {
     {
       step: "1",
       title: "Create your parent account",
-      description: "Download Taskr on your iPhone, sign up as the parent, and create profiles for each child."
+      description: "Download taskr on your iPhone, sign up as the parent, and create profiles for each child."
     },
     {
       step: "2",
@@ -34,7 +34,7 @@ export default function Home() {
     {
       step: "4",
       title: "Overdue tasks turn on Screen Time",
-      description: "When something is overdue, Taskr blocks the chosen apps until your child submits a photo you approve."
+      description: "When something is overdue, taskr blocks the chosen apps until your child submits a photo you approve."
     }
   ];
 
@@ -71,8 +71,8 @@ export default function Home() {
 
   const faqs = [
     {
-      question: "Does Taskr replace Apple Screen Time?",
-      answer: "Taskr works with Apple's Family Controls. We tie chores directly to Screen Time so you stay in Apple's approved system."
+      question: "Does taskr replace Apple Screen Time?",
+      answer: "taskr works with Apple's Family Controls. We tie chores directly to Screen Time so you stay in Apple's approved system."
     },
     {
       question: "When do apps actually get blocked?",
@@ -80,19 +80,19 @@ export default function Home() {
     },
     {
       question: "How do kids show they finished a task?",
-      answer: "They open Taskr, tap the task, and submit a quick photo as proof so you can see the work."
+      answer: "They open taskr, tap the task, and submit a quick photo as proof so you can see the work."
     },
     {
       question: "What can parents do after a submission?",
       answer: "Parents can approve the submission, reject it and enforce restrictions until resubmission, or extend the deadline."
     },
     {
-      question: "Which devices does Taskr support?",
-      answer: "Taskr is built for iOS families and manages Screen Time on kids' Apple devices through Family Controls."
+      question: "Which devices does taskr support?",
+      answer: "taskr is built for iOS families and manages Screen Time on kids' Apple devices through Family Controls."
     },
     {
       question: "How do you handle our family's data?",
-      answer: "Taskr keeps your information private, uses encryption, and never sells or shares your family's data."
+      answer: "taskr keeps your information private, uses encryption, and never sells or shares your family's data."
     }
   ];
 
@@ -103,7 +103,7 @@ export default function Home() {
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <TaskrLogo className="w-10 h-10" />
-              <span className="text-2xl font-bold text-foreground">Taskr</span>
+              <span className="text-2xl font-bold text-foreground">taskr</span>
             </Link>
             
             <div className="hidden md:flex items-center gap-8">
@@ -162,7 +162,7 @@ export default function Home() {
               Turn chores into Screen Time-backed tasks.
             </h1>
             <p className="text-base sm:text-xl lg:text-2xl text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto text-balance leading-relaxed">
-              Assign tasks with due times. If they go overdue, Taskr turns on Screen Time and blocks selected apps until you approve your child's work from a photo submission.
+              Assign tasks with due times. If they go overdue, taskr turns on Screen Time and blocks selected apps until you approve your child's work from a photo submission.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
               <Button size="lg" className="bg-black text-white hover:bg-black/90 rounded-full text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 w-full sm:w-auto">
@@ -171,7 +171,7 @@ export default function Home() {
               </Button>
             </div>
             <p className="text-sm sm:text-base text-muted-foreground mt-3">
-              Get early access and help shape Taskr.
+              Get early access and help shape taskr.
             </p>
           </div>
         </div>
@@ -195,7 +195,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-foreground">Tasks that actually get done</h3>
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                Create clear tasks with due times for each child. If something goes overdue, Taskr blocks the apps you chose until you approve their photo submission.
+                Create clear tasks with due times for each child. If something goes overdue, taskr blocks the apps you chose until you approve their photo submission.
               </p>
             </div>
 
@@ -204,7 +204,7 @@ export default function Home() {
                 <div className="mb-4 sm:mb-8 relative">
                   <img 
                     src="/IMG_1561-portrait.png" 
-                    alt="Taskr app showing the real-time parent dashboard"
+                    alt="taskr app showing the real-time parent dashboard"
                     className="w-auto h-[320px] sm:h-[450px] lg:h-[570px] object-contain drop-shadow-2xl"
                   />
                 </div>
@@ -223,7 +223,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-foreground">Photo proof and parent approvals</h3>
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                Kids snap a photo when they finish a chore. You approve, reject, or add feedback from your phone and Taskr updates Screen Time instantly.
+                Kids snap a photo when they finish a chore. You approve, reject, or add feedback from your phone and taskr updates Screen Time instantly.
               </p>
             </div>
 
@@ -243,7 +243,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-foreground">Built on Apple Family Controls</h3>
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                Taskr uses Apple's approved Family Controls so Screen Time changes are safe, secure, and fully under your supervision.
+                taskr uses Apple's approved Family Controls so Screen Time changes are safe, secure, and fully under your supervision.
               </p>
             </div>
           </div>
@@ -282,7 +282,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-mint-light/30 to-transparent blur-3xl -z-10"></div>
               <img
                 src="/IMG_1565-portrait.png"
-                alt="Taskr create task flow on iPhone"
+                alt="taskr create task flow on iPhone"
                 className="relative z-10 w-full max-w-[240px] sm:max-w-sm h-auto object-contain drop-shadow-[0_20px_60px_rgba(0,0,0,0.25)]"
               />
             </div>
@@ -297,7 +297,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-mint-light/30 to-transparent blur-3xl -z-10"></div>
               <img
                 src="/IMG_1566-portrait.png"
-                alt="Taskr Screen Time controls view"
+                alt="taskr Screen Time controls view"
                 className="relative z-10 w-full max-w-[240px] sm:max-w-sm h-auto object-contain drop-shadow-[0_20px_60px_rgba(0,0,0,0.25)]"
               />
             </div>
@@ -309,7 +309,7 @@ export default function Home() {
                 Built-in Screen Time Controls
               </h2>
               <p className="text-base sm:text-xl text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
-                This is the parent dashboard. Taskr links chores to Screen Time and shows what needs approval and what's currently overdue.
+                This is the parent dashboard. taskr links chores to Screen Time and shows what needs approval and what's currently overdue.
               </p>
               <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
                 When a task goes overdue, the apps you selected are blocked. Kids submit a photo, it lands here, and you decide what happens next.
@@ -333,7 +333,7 @@ export default function Home() {
                   <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 text-mint-dark mt-0.5 sm:mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-semibold text-sm sm:text-base">Only locks when overdue</p>
-                    <p className="text-muted-foreground text-sm sm:text-base">Before the deadline, everything stays open. Taskr only locks apps when a task is late.</p>
+                    <p className="text-muted-foreground text-sm sm:text-base">Before the deadline, everything stays open. taskr only locks apps when a task is late.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-2 sm:gap-3">
@@ -391,9 +391,9 @@ export default function Home() {
       <section id="why-taskr" className="py-12 sm:py-20 lg:py-32">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4">Why Taskr</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4">Why taskr</h2>
             <p className="text-base sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-              Taskr takes the power of Apple Screen Time and connects it directly to tasks and chores, so device access is earned, not argued about.
+              taskr takes the power of Apple Screen Time and connects it directly to tasks and chores, so device access is earned, not argued about.
             </p>
           </div>
 
@@ -403,7 +403,7 @@ export default function Home() {
               <thead className="bg-white/10">
                 <tr>
                   <th className="py-4 px-6 text-sm font-semibold text-muted-foreground uppercase tracking-wider text-left">Feature</th>
-                  <th className="py-4 px-6 text-sm font-semibold text-muted-foreground uppercase tracking-wider text-left">Taskr</th>
+                  <th className="py-4 px-6 text-sm font-semibold text-muted-foreground uppercase tracking-wider text-left">taskr</th>
                   <th className="py-4 px-6 text-sm font-semibold text-muted-foreground uppercase tracking-wider text-left">Standard Screen Time</th>
                 </tr>
               </thead>
@@ -447,7 +447,7 @@ export default function Home() {
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
                     <div className="flex-shrink-0 w-20">
-                      <span className="text-xs font-semibold text-mint-dark uppercase tracking-wide">Taskr</span>
+                      <span className="text-xs font-semibold text-mint-dark uppercase tracking-wide">taskr</span>
                     </div>
                     <div className="flex items-start gap-2 flex-1">
                       {row.taskrHas ? (
@@ -483,7 +483,7 @@ export default function Home() {
           <div className="text-center mb-8 sm:mb-16">
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4">Frequently Asked Questions</h2>
             <p className="text-base sm:text-xl text-muted-foreground">
-              Everything you need to know about Taskr.
+              Everything you need to know about taskr.
             </p>
           </div>
 
@@ -504,7 +504,7 @@ export default function Home() {
 
       <section id="contact" className="py-12 sm:py-20 lg:py-32">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">Join early families testing Taskr</h2>
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">Join early families testing taskr</h2>
           <p className="text-base sm:text-xl text-muted-foreground mb-6 sm:mb-10 leading-relaxed">
             Help us shape how Screen Time and chores work together so kids know exactly what is due and what happens when they miss a deadline.
           </p>
