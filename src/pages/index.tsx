@@ -159,7 +159,7 @@ export default function Home() {
               Built for iOS families
             </Badge>
             <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold text-foreground mb-4 sm:mb-6 text-balance leading-tight">
-              Turn chores into Screen Time-backed tasks.
+              Everything You Need to Run a Smooth Household
             </h1>
             <p className="text-base sm:text-xl lg:text-2xl text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto text-balance leading-relaxed">
               Assign tasks with due times. If they go overdue, taskr turns on Screen Time and blocks selected apps until you approve your child's work from a photo submission.
@@ -181,7 +181,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-16">
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6 leading-tight">
-              Everything You Need to Run a Smooth Household
+              Chores That Actually Get Done
             </h2>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Powerful features designed for busy parents and simple enough for kids to understand at a glance.
