@@ -12,7 +12,7 @@ export function SiteFooter() {
               <span className="text-xl font-bold">Taskr</span>
             </div>
             <p className="text-sm text-muted-foreground">
-              Making family task management simple and fun.
+              Connecting chores to Apple's Screen Time so kids earn device access.
             </p>
           </div>
 
