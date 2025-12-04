@@ -161,46 +161,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="create-tasks" className="py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <Badge className="mb-4 bg-mint-light/50 text-mint-dark border-0 px-4 py-1 rounded-full">
-                Create Tasks Easily
-              </Badge>
-              <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
-                Capture every detail in seconds.
-              </h2>
-              <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
-                Add chores, give extra context, pick who is responsible, and set the perfect due date without leaving this simple screen. Parents see everything, kids know exactly what to do.
-              </p>
-              <ul className="space-y-4 text-lg text-foreground">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-mint-dark mt-1" />
-                  <span>Task name, details, and due date all in one clean flow.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Users className="w-6 h-6 text-mint-dark mt-1" />
-                  <span>Assign tasks to the right kid with one tap.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Bell className="w-6 h-6 text-mint-dark mt-1" />
-                  <span>Automatic reminders keep everything moving.</span>
-                </li>
-              </ul>
-            </div>
-            <div className="relative flex justify-center">
-              <div className="absolute inset-0 bg-gradient-to-br from-mint-light/30 to-transparent blur-3xl -z-10"></div>
-              <img
-                src="/IMG_1565-portrait.png"
-                alt="Taskr create task flow on iPhone"
-                className="relative z-10 w-full max-w-sm h-auto object-contain drop-shadow-[0_20px_60px_rgba(0,0,0,0.25)]"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="features" className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -284,6 +244,46 @@ export default function Home() {
               <a href="#" className="inline-flex items-center text-foreground font-medium hover:gap-2 transition-all">
                 Learn More <ArrowRight className="w-4 h-4 ml-1" />
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="create-tasks" className="py-20 lg:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <Badge className="mb-4 bg-mint-light/50 text-mint-dark border-0 px-4 py-1 rounded-full">
+                Create Tasks Easily
+              </Badge>
+              <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
+                Capture every detail in seconds.
+              </h2>
+              <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
+                Add chores, give extra context, pick who is responsible, and set the perfect due date without leaving this simple screen. Parents see everything, kids know exactly what to do.
+              </p>
+              <ul className="space-y-4 text-lg text-foreground">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-mint-dark mt-1" />
+                  <span>Task name, details, and due date all in one clean flow.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Users className="w-6 h-6 text-mint-dark mt-1" />
+                  <span>Assign tasks to the right kid with one tap.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Bell className="w-6 h-6 text-mint-dark mt-1" />
+                  <span>Automatic reminders keep everything moving.</span>
+                </li>
+              </ul>
+            </div>
+            <div className="relative flex justify-center">
+              <div className="absolute inset-0 bg-gradient-to-br from-mint-light/30 to-transparent blur-3xl -z-10"></div>
+              <img
+                src="/IMG_1565-portrait.png"
+                alt="Taskr create task flow on iPhone"
+                className="relative z-10 w-full max-w-sm h-auto object-contain drop-shadow-[0_20px_60px_rgba(0,0,0,0.25)]"
+              />
             </div>
           </div>
         </div>
