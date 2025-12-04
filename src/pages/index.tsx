@@ -181,7 +181,7 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold mb-3 text-foreground">Tasks that actually get done</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Create clear tasks with due times for each child. If something goes overdue, Taskr blocks the apps you chose until the child completes the task.
+                Create clear tasks with due times for each child. If something goes overdue, Taskr blocks the apps you chose until you approve their photo submission.
               </p>
             </div>
 
@@ -295,7 +295,7 @@ export default function Home() {
                 Built-in Screen Time Controls
               </h2>
               <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
-                This is the parent dashboard. Taskr links chores to Screen Time and shows what needs approval and what's currently overdue.
+                This is the parent dashboard on the Needs Review tab. Taskr links chores to Screen Time and shows what needs approval and what's currently overdue.
               </p>
               <p className="text-muted-foreground mb-8 leading-relaxed">
                 When a task goes overdue, the apps you selected are blocked. Kids submit a photo, it lands here, and you decide what happens next.
