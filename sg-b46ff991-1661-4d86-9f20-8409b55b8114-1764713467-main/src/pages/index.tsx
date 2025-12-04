@@ -1,4 +1,3 @@
-
 import { CheckCircle2, Calendar, Bell, Users, Sparkles, TrendingUp, Clock, Shield, Smile, ArrowRight, Apple, Star, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -86,52 +85,6 @@ export default function Home() {
     }
   ];
 
-  const pricing = [
-    {
-      name: "Free",
-      price: "$0",
-      period: "forever",
-      features: [
-        "Up to 3 family members",
-        "10 active tasks",
-        "Basic notifications",
-        "iOS app access"
-      ],
-      cta: "Get Started Free",
-      popular: false
-    },
-    {
-      name: "Family",
-      price: "$4.99",
-      period: "per month",
-      features: [
-        "Unlimited family members",
-        "Unlimited tasks",
-        "Priority notifications",
-        "Task history & analytics",
-        "Custom rewards system",
-        "Priority support"
-      ],
-      cta: "Start Free Trial",
-      popular: true
-    },
-    {
-      name: "Family Plus",
-      price: "$8.99",
-      period: "per month",
-      features: [
-        "Everything in Family",
-        "Multiple households",
-        "Advanced scheduling",
-        "Custom task templates",
-        "Export reports",
-        "Premium support"
-      ],
-      cta: "Start Free Trial",
-      popular: false
-    }
-  ];
-
   const faqs = [
     {
       question: "Is Taskr really free?",
@@ -160,24 +113,27 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen">
-      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-mint-light/30">
+    <div className="min-h-screen gradient-page">
+      <nav className="sticky top-0 z-50 border-b border-white/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg gradient-mint flex items-center justify-center">
-                <CheckCircle2 className="w-5 h-5 text-white" />
-              </div>
+              <img 
+                src="/AppIcon-512@2x.png" 
+                alt="Taskr App Icon" 
+                className="w-10 h-10 rounded-xl"
+              />
               <span className="text-2xl font-bold text-foreground">Taskr</span>
             </div>
             
             <div className="hidden md:flex items-center gap-8">
               <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Features</a>
               <a href="#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors">How It Works</a>
-              <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
               <a href="#faq" className="text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
-              <Button variant="ghost">Sign In</Button>
-              <Button className="gradient-mint border-0 hover:opacity-90 transition-opacity">Get Started</Button>
+              <Button className="bg-black text-white hover:bg-black/90 rounded-full px-6">
+                Download App
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
             </div>
 
             <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -187,82 +143,136 @@ export default function Home() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-mint-light/30 bg-white">
+          <div className="md:hidden border-t border-white/20 bg-white/30">
             <div className="px-4 py-4 space-y-3">
               <a href="#features" className="block py-2 text-muted-foreground hover:text-foreground transition-colors">Features</a>
               <a href="#how-it-works" className="block py-2 text-muted-foreground hover:text-foreground transition-colors">How It Works</a>
-              <a href="#pricing" className="block py-2 text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
               <a href="#faq" className="block py-2 text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
-              <Button variant="ghost" className="w-full justify-start">Sign In</Button>
-              <Button className="w-full gradient-mint border-0 hover:opacity-90 transition-opacity">Get Started</Button>
+              <Button className="w-full bg-black text-white hover:bg-black/90 rounded-full">
+                Download App
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
             </div>
           </div>
         )}
       </nav>
 
-      <section className="relative overflow-hidden gradient-mint-soft py-20 lg:py-32">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-mint-medium rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-mint-light rounded-full blur-3xl"></div>
-        </div>
-        
+      <section className="relative overflow-hidden py-20 lg:py-32">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
-            <Badge className="mb-6 gradient-mint border-0 text-white px-4 py-1">
-              <Sparkles className="w-3 h-3 mr-1" />
-              Now Available on iOS
+            <Badge className="mb-6 bg-mint-light/50 text-mint-dark border-0 px-4 py-1 rounded-full">
+              Best Family Management App
             </Badge>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6 text-balance">
-              Keep Your Family Organized, <span className="text-mint-dark">Effortlessly</span>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6 text-balance leading-tight">
+              Manage Your Family Chores, <span className="text-mint-dark">Anytime, Anywhere.</span>
             </h1>
-            <p className="text-xl sm:text-2xl text-muted-foreground mb-10 max-w-2xl mx-auto text-balance">
-              Assign chores, track progress, and get real-time updates as your kids complete tasks. Stay on schedule without the nagging.
+            <p className="text-xl sm:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto text-balance leading-relaxed">
+              Taskr helps you assign chores, track progress, set due times, and get real-time updates as kids complete tasks—all in one simple app.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="gradient-mint border-0 hover:opacity-90 transition-opacity text-lg px-8 py-6">
+              <Button size="lg" className="bg-black text-white hover:bg-black/90 rounded-full text-lg px-8 py-6">
                 <Apple className="w-5 h-5 mr-2" />
-                Download on App Store
+                Download on the App Store
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-mint-medium hover:bg-mint-light/20">
-                Sign Up Free
-                <ArrowRight className="w-5 h-5 ml-2" />
+              <Button size="lg" className="bg-black text-white hover:bg-black/90 rounded-full text-lg px-8 py-6">
+                Get it on Google Play
               </Button>
             </div>
-            <p className="text-sm text-muted-foreground mt-6">Free forever plan available. No credit card required.</p>
           </div>
         </div>
       </section>
 
-      <section id="features" className="py-20 lg:py-32 bg-white">
+      <section id="features" className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-mint-light text-mint-dark">Features</Badge>
-            <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">Everything You Need to Run a Smooth Household</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Powerful features designed for busy parents and easy enough for kids to love.
+            <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
+              Everything You Need.<br />Nothing You Don't.
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Comprehensive family task management designed with simplicity and security in mind.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <Card key={index} className="border-mint-light/50 hover:border-mint-medium transition-all hover:shadow-lg hover:-translate-y-1">
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-xl gradient-mint flex items-center justify-center mb-4">
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <CardTitle className="text-xl">{feature.title}</CardTitle>
-                  <CardDescription className="text-base">{feature.description}</CardDescription>
-                </CardHeader>
-              </Card>
-            ))}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="glass rounded-3xl p-8 border border-white/40 hover:shadow-lg transition-all">
+              <div className="w-16 h-16 rounded-full bg-mint-light/50 flex items-center justify-center mb-6">
+                <CheckCircle2 className="w-8 h-8 text-mint-dark" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-foreground">Easy Task Assignment</h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Create and assign chores to your kids in seconds. Set due dates, priority levels, and track everything.
+              </p>
+              <a href="#" className="inline-flex items-center text-foreground font-medium hover:gap-2 transition-all">
+                Learn More <ArrowRight className="w-4 h-4 ml-1" />
+              </a>
+            </div>
+
+            <div className="lg:row-span-2 rounded-3xl p-12 overflow-hidden relative gradient-mint flex flex-col justify-center items-center text-center min-h-[500px]">
+              <div className="relative z-10 w-full flex flex-col items-center">
+                <div className="mb-8 relative">
+                  <img 
+                    src="/IMG_1561-portrait.png" 
+                    alt="Taskr app showing real-time task progress"
+                    className="w-auto h-[570px] object-contain drop-shadow-2xl"
+                  />
+                </div>
+
+                <h3 className="text-3xl font-bold mb-4 text-white">Real-Time Progress</h3>
+                <p className="text-white/90 text-lg leading-relaxed max-w-md mx-auto mb-6">
+                  Watch as tasks get completed in real-time. Get instant notifications and celebrate wins together.
+                </p>
+                <a href="#" className="inline-flex items-center text-white font-medium hover:gap-2 transition-all">
+                  Learn More <ArrowRight className="w-4 h-4 ml-1" />
+                </a>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-mint-light/30 to-transparent pointer-events-none"></div>
+            </div>
+
+            <div className="glass rounded-3xl p-8 border border-white/40 hover:shadow-lg transition-all">
+              <div className="w-16 h-16 rounded-full bg-mint-light/50 flex items-center justify-center mb-6">
+                <Users className="w-8 h-8 text-mint-dark" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-foreground">Family Dashboard</h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                See your whole family's progress at a glance. Smart insights help you stay organized.
+              </p>
+              <a href="#" className="inline-flex items-center text-foreground font-medium hover:gap-2 transition-all">
+                Learn More <ArrowRight className="w-4 h-4 ml-1" />
+              </a>
+            </div>
+
+            <div className="glass rounded-3xl p-8 border border-white/40 hover:shadow-lg transition-all">
+              <div className="w-16 h-16 rounded-full bg-mint-light/50 flex items-center justify-center mb-6">
+                <Bell className="w-8 h-8 text-mint-dark" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-foreground">Smart Reminders</h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Automatic reminders keep everyone on track without the nagging. Set it and forget it.
+              </p>
+              <a href="#" className="inline-flex items-center text-foreground font-medium hover:gap-2 transition-all">
+                Learn More <ArrowRight className="w-4 h-4 ml-1" />
+              </a>
+            </div>
+
+            <div className="glass rounded-3xl p-8 border border-white/40 hover:shadow-lg transition-all">
+              <div className="w-16 h-16 rounded-full bg-mint-light/50 flex items-center justify-center mb-6">
+                <Shield className="w-8 h-8 text-mint-dark" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-foreground">Secure & Private</h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Your family data is encrypted and private. We never share your information with anyone.
+              </p>
+              <a href="#" className="inline-flex items-center text-foreground font-medium hover:gap-2 transition-all">
+                Learn More <ArrowRight className="w-4 h-4 ml-1" />
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="how-it-works" className="py-20 lg:py-32 gradient-mint-soft">
+      <section id="how-it-works" className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <Badge className="mb-4 gradient-mint border-0 text-white">How It Works</Badge>
             <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">Get Started in 4 Simple Steps</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               From setup to success in minutes. No complicated learning curve.
@@ -272,32 +282,22 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {howItWorks.map((step, index) => (
               <div key={index} className="relative">
-                <div className="bg-white rounded-2xl p-6 shadow-sm border border-mint-light/50 hover:shadow-md transition-shadow">
-                  <div className="w-12 h-12 rounded-full gradient-mint flex items-center justify-center text-white text-2xl font-bold mb-4">
+                <div className="glass rounded-3xl p-8 border border-white/40 hover:shadow-lg transition-shadow">
+                  <div className="w-14 h-14 rounded-full gradient-mint flex items-center justify-center text-white text-2xl font-bold mb-6">
                     {step.step}
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                  <p className="text-muted-foreground">{step.description}</p>
+                  <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{step.description}</p>
                 </div>
-                {index < howItWorks.length - 1 && (
-                  <ArrowRight className="hidden lg:block absolute top-1/2 -right-4 -translate-y-1/2 w-8 h-8 text-mint-medium" />
-                )}
               </div>
             ))}
-          </div>
-
-          <div className="mt-16 text-center">
-            <Button size="lg" className="gradient-mint border-0 hover:opacity-90 transition-opacity">
-              Start Your Free Trial
-            </Button>
           </div>
         </div>
       </section>
 
-      <section id="testimonials" className="py-20 lg:py-32 bg-white">
+      <section id="testimonials" className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-mint-light text-mint-dark">Testimonials</Badge>
             <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">Loved by Families Everywhere</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               See what parents are saying about Taskr.
@@ -306,14 +306,14 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="border-mint-light/50">
+              <Card key={index} className="glass border-white/40">
                 <CardHeader>
-                  <div className="flex gap-1 mb-3">
+                  <div className="flex gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 fill-mint-medium text-mint-medium" />
                     ))}
                   </div>
-                  <CardDescription className="text-base text-foreground italic">
+                  <CardDescription className="text-base text-foreground italic leading-relaxed">
                     "{testimonial.content}"
                   </CardDescription>
                 </CardHeader>
@@ -329,54 +329,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="pricing" className="py-20 lg:py-32 gradient-mint-soft">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 gradient-mint border-0 text-white">Pricing</Badge>
-            <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">Simple, Transparent Pricing</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Start free, upgrade when you're ready. No hidden fees.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricing.map((plan, index) => (
-              <Card key={index} className={`relative ${plan.popular ? 'border-mint-medium border-2 shadow-xl scale-105' : 'border-mint-light/50'}`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <Badge className="gradient-mint border-0 text-white">Most Popular</Badge>
-                  </div>
-                )}
-                <CardHeader>
-                  <CardTitle className="text-2xl">{plan.name}</CardTitle>
-                  <div className="mt-4">
-                    <span className="text-4xl font-bold">{plan.price}</span>
-                    <span className="text-muted-foreground ml-2">/ {plan.period}</span>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3 mb-6">
-                    {plan.features.map((feature, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <CheckCircle2 className="w-5 h-5 text-mint-medium mt-0.5 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button className={`w-full ${plan.popular ? 'gradient-mint border-0' : 'bg-white border border-mint-medium text-mint-dark hover:bg-mint-light/20'}`}>
-                    {plan.cta}
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="faq" className="py-20 lg:py-32 bg-white">
+      <section id="faq" className="py-20 lg:py-32">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-mint-light text-mint-dark">FAQ</Badge>
             <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">Frequently Asked Questions</h2>
             <p className="text-xl text-muted-foreground">
               Everything you need to know about Taskr.
@@ -385,10 +340,10 @@ export default function Home() {
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <Card key={index} className="border-mint-light/50">
+              <Card key={index} className="glass border-white/40">
                 <CardHeader>
                   <CardTitle className="text-lg">{faq.question}</CardTitle>
-                  <CardDescription className="text-base text-foreground mt-2">
+                  <CardDescription className="text-base text-foreground mt-2 leading-relaxed">
                     {faq.answer}
                   </CardDescription>
                 </CardHeader>
@@ -398,32 +353,34 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="py-20 lg:py-32 gradient-mint-soft">
+      <section id="contact" className="py-20 lg:py-32">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">Ready to Transform Your Family's Routine?</h2>
-          <p className="text-xl text-muted-foreground mb-10">
+          <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
             Join thousands of families who have simplified their household management with Taskr.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="gradient-mint border-0 hover:opacity-90 transition-opacity text-lg px-8 py-6">
+            <Button size="lg" className="bg-black text-white hover:bg-black/90 rounded-full text-lg px-8 py-6">
               <Apple className="w-5 h-5 mr-2" />
               Download Now
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-mint-medium hover:bg-mint-light/20">
+            <Button size="lg" variant="outline" className="rounded-full text-lg px-8 py-6 border-2 hover:bg-white/50">
               Contact Support
             </Button>
           </div>
         </div>
       </section>
 
-      <footer className="bg-white border-t border-mint-light/30 py-12">
+      <footer className="glass border-t border-white/40 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 rounded-lg gradient-mint flex items-center justify-center">
-                  <CheckCircle2 className="w-5 h-5 text-white" />
-                </div>
+                <img 
+                  src="/AppIcon-512@2x.png" 
+                  alt="Taskr App Icon" 
+                  className="w-8 h-8 rounded-lg"
+                />
                 <span className="text-xl font-bold">Taskr</span>
               </div>
               <p className="text-sm text-muted-foreground">
@@ -435,7 +392,6 @@ export default function Home() {
               <h3 className="font-semibold mb-4">Product</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><a href="#features" className="hover:text-foreground transition-colors">Features</a></li>
-                <li><a href="#pricing" className="hover:text-foreground transition-colors">Pricing</a></li>
                 <li><a href="#faq" className="hover:text-foreground transition-colors">FAQ</a></li>
               </ul>
             </div>
@@ -458,7 +414,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="border-t border-mint-light/30 pt-8 text-center text-sm text-muted-foreground">
+          <div className="border-t border-white/40 pt-8 text-center text-sm text-muted-foreground">
             <p>© 2025 Taskr. All rights reserved.</p>
           </div>
         </div>

@@ -1,7 +1,7 @@
-
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, CheckCircle2 } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
+import { TaskrLogo } from "@/components/TaskrLogo";
 
 export default function TermsOfService() {
   return (
@@ -10,9 +10,7 @@ export default function TermsOfService() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg gradient-mint flex items-center justify-center">
-                <CheckCircle2 className="w-5 h-5 text-white" />
-              </div>
+              <TaskrLogo className="w-10 h-10" />
               <span className="text-2xl font-bold text-foreground">Taskr</span>
             </Link>
             <Link href="/">
