@@ -79,7 +79,7 @@ export default function Home() {
     },
     {
       question: "What can parents do after a submission?",
-      answer: "Approve to lift Screen Time instantly, reject with feedback so the task stays blocked, or extend the deadline."
+      answer: "Parents can approve the submission, reject it and enforce restrictions until resubmission, or extend the deadline."
     },
     {
       question: "Which devices does Taskr support?",
