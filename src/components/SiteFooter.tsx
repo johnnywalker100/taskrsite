@@ -8,7 +8,7 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <TaskrLogo className="w-8 h-8 rounded-lg" />
+              <TaskrLogo className="w-8 h-8" />
               <span className="text-xl font-bold">Taskr</span>
             </div>
             <p className="text-sm text-muted-foreground">

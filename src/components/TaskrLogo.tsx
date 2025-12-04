@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 type TaskrLogoProps = {
   className?: string;
@@ -11,7 +12,7 @@ export function TaskrLogo({ className = "w-8 h-8" }: TaskrLogoProps) {
       alt="Taskr logo"
       width={200}
       height={200}
-      className={className}
+      className={cn("rounded-xl", className)}
       priority
     />
   );
