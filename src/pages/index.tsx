@@ -1,4 +1,4 @@
-import { CheckCircle2, Sparkles, TrendingUp, Clock, Shield, ArrowRight, Apple, Menu, X } from "lucide-react";
+import { CheckCircle2, Sparkles, Clock, Shield, ArrowRight, Apple, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -184,7 +184,7 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold mb-3 text-foreground">Tasks that actually get done</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Create clear tasks with due times for each child. If something goes overdue, Taskr blocks the apps you chose until you approve it.
+                Create clear tasks with due times for each child. If something goes overdue, Taskr blocks the apps you chose until the child completes the task.
               </p>
             </div>
 
@@ -223,16 +223,6 @@ export default function Home() {
               <h3 className="text-2xl font-bold mb-3 text-foreground">Smart Screen Time rules</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Set Screen Time rules that only activate when a task misses its deadline. Choose apps or categories to block and keep essentials available.
-              </p>
-            </div>
-
-            <div className="glass rounded-3xl p-8 border border-white/40 hover:shadow-lg transition-all">
-              <div className="w-16 h-16 rounded-full bg-mint-light/50 flex items-center justify-center mb-6">
-                <TrendingUp className="w-8 h-8 text-mint-dark" />
-              </div>
-              <h3 className="text-2xl font-bold mb-3 text-foreground">Real-time parent dashboard</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                See what is due, overdue, which apps are blocked, and which photo submissions are waiting for review—all in one view.
               </p>
             </div>
 
