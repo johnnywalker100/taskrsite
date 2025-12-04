@@ -189,15 +189,13 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <div className="relative">
+            <div className="relative flex justify-center">
               <div className="absolute inset-0 bg-gradient-to-br from-mint-light/30 to-transparent blur-3xl -z-10"></div>
-              <div className="glass rounded-[40px] p-6 border border-white/40 shadow-2xl">
-                <img
-                  src="/IMG_1565-portrait.png"
-                  alt="Taskr create task flow on iPhone"
-                  className="w-full h-auto object-contain"
-                />
-              </div>
+              <img
+                src="/IMG_1565-portrait.png"
+                alt="Taskr create task flow on iPhone"
+                className="relative z-10 w-full max-w-sm h-auto object-contain drop-shadow-[0_20px_60px_rgba(0,0,0,0.25)]"
+              />
             </div>
           </div>
         </div>
