@@ -98,7 +98,7 @@ export default function Home() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-2">
               <img 
-                src="/AppIcon-512@2x.png" 
+                src="/ChatGPT_Image_Dec_4__2025__12_21_24_AM-removebg-preview.png" 
                 alt="Taskr App Icon" 
                 className="w-10 h-10 rounded-xl"
               />
@@ -402,7 +402,7 @@ export default function Home() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <img 
-                  src="/AppIcon-512@2x.png" 
+                  src="/ChatGPT_Image_Dec_4__2025__12_21_24_AM-removebg-preview.png" 
                   alt="Taskr App Icon" 
                   className="w-8 h-8 rounded-lg"
                 />
