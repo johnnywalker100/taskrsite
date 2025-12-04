@@ -289,6 +289,46 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="task-submissions" className="py-20 lg:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="relative flex justify-center order-1 lg:order-none">
+              <div className="absolute inset-0 bg-gradient-to-br from-mint-light/30 to-transparent blur-3xl -z-10"></div>
+              <img
+                src="/IMG_1566-portrait.png"
+                alt="Taskr recent submissions view"
+                className="relative z-10 w-full max-w-sm h-auto object-contain drop-shadow-[0_20px_60px_rgba(0,0,0,0.25)]"
+              />
+            </div>
+            <div className="order-2 lg:order-none">
+              <Badge className="mb-4 bg-mint-light/50 text-mint-dark border-0 px-4 py-1 rounded-full">
+                Review Task Submissions
+              </Badge>
+              <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
+                See every completion at a glance.
+              </h2>
+              <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
+                Swipe through what your kids have finished, add feedback, and keep streaks going without scrolling through endless lists.
+              </p>
+              <ul className="space-y-4 text-lg text-foreground">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-mint-dark mt-1" />
+                  <span>Photo proof and notes show exactly how the task was done.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Sparkles className="w-6 h-6 text-mint-dark mt-1" />
+                  <span>Approve, reward, or send it back for edits in seconds.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Clock className="w-6 h-6 text-mint-dark mt-1" />
+                  <span>Timeline view keeps you in sync with due dates and streaks.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="how-it-works" className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
