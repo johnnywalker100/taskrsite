@@ -193,14 +193,14 @@ export default function Home() {
                 <div className="mb-8 relative">
                   <img 
                     src="/IMG_1561-portrait.png" 
-                    alt="Taskr app showing a kid-friendly task list"
+                    alt="Taskr app showing the real-time parent dashboard"
                     className="w-auto h-[570px] object-contain drop-shadow-2xl"
                   />
                 </div>
 
-                <h3 className="text-3xl font-bold mb-4 text-white">Kid-friendly task list</h3>
+                <h3 className="text-3xl font-bold mb-4 text-white">Real-time parent dashboard</h3>
                 <p className="text-white/90 text-lg leading-relaxed max-w-md mx-auto">
-                  Kids see color-coded tasks, due times, and exactly which apps will lock if they miss a deadline. Submitting photo proof is just a tap.
+                  See what is due, overdue, which apps are blocked, and which photo submissions are waiting for review—all in one view.
                 </p>
               </div>
               <div className="absolute inset-0 bg-gradient-to-br from-mint-light/30 to-transparent pointer-events-none"></div>
