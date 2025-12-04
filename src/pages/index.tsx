@@ -183,12 +183,9 @@ export default function Home() {
                 <CheckCircle2 className="w-8 h-8 text-mint-dark" />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-foreground">Tasks that actually get done</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 Create clear tasks with due times for each child. If something goes overdue, Taskr blocks the apps you chose until you approve it.
               </p>
-              <a href="#" className="inline-flex items-center text-foreground font-medium hover:gap-2 transition-all">
-                Learn More <ArrowRight className="w-4 h-4 ml-1" />
-              </a>
             </div>
 
             <div className="lg:row-span-2 rounded-3xl p-12 overflow-hidden relative gradient-mint flex flex-col justify-center items-center text-center min-h-[500px]">
@@ -202,12 +199,9 @@ export default function Home() {
                 </div>
 
                 <h3 className="text-3xl font-bold mb-4 text-white">Kid-friendly task list</h3>
-                <p className="text-white/90 text-lg leading-relaxed max-w-md mx-auto mb-6">
+                <p className="text-white/90 text-lg leading-relaxed max-w-md mx-auto">
                   Kids see color-coded tasks, due times, and exactly which apps will lock if they miss a deadline. Submitting photo proof is just a tap.
                 </p>
-                <a href="#" className="inline-flex items-center text-white font-medium hover:gap-2 transition-all">
-                  Learn More <ArrowRight className="w-4 h-4 ml-1" />
-                </a>
               </div>
               <div className="absolute inset-0 bg-gradient-to-br from-mint-light/30 to-transparent pointer-events-none"></div>
             </div>
@@ -217,12 +211,9 @@ export default function Home() {
                 <Sparkles className="w-8 h-8 text-mint-dark" />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-foreground">Photo proof and parent approvals</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 Kids snap a photo when they finish a chore. You approve, reject, or add feedback from your phone and Taskr updates Screen Time instantly.
               </p>
-              <a href="#" className="inline-flex items-center text-foreground font-medium hover:gap-2 transition-all">
-                Learn More <ArrowRight className="w-4 h-4 ml-1" />
-              </a>
             </div>
 
             <div className="glass rounded-3xl p-8 border border-white/40 hover:shadow-lg transition-all">
@@ -230,12 +221,9 @@ export default function Home() {
                 <Clock className="w-8 h-8 text-mint-dark" />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-foreground">Smart Screen Time rules</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 Set Screen Time rules that only activate when a task misses its deadline. Choose apps or categories to block and keep essentials available.
               </p>
-              <a href="#" className="inline-flex items-center text-foreground font-medium hover:gap-2 transition-all">
-                Learn More <ArrowRight className="w-4 h-4 ml-1" />
-              </a>
             </div>
 
             <div className="glass rounded-3xl p-8 border border-white/40 hover:shadow-lg transition-all">
@@ -243,12 +231,9 @@ export default function Home() {
                 <TrendingUp className="w-8 h-8 text-mint-dark" />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-foreground">Real-time parent dashboard</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 See what is due, overdue, which apps are blocked, and which photo submissions are waiting for review—all in one view.
               </p>
-              <a href="#" className="inline-flex items-center text-foreground font-medium hover:gap-2 transition-all">
-                Learn More <ArrowRight className="w-4 h-4 ml-1" />
-              </a>
             </div>
 
             <div className="glass rounded-3xl p-8 border border-white/40 hover:shadow-lg transition-all">
@@ -256,12 +241,9 @@ export default function Home() {
                 <Shield className="w-8 h-8 text-mint-dark" />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-foreground">Built on Apple Family Controls</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 Taskr uses Apple's approved Family Controls so Screen Time changes are safe, secure, and fully under your supervision.
               </p>
-              <a href="#" className="inline-flex items-center text-foreground font-medium hover:gap-2 transition-all">
-                Learn More <ArrowRight className="w-4 h-4 ml-1" />
-              </a>
             </div>
           </div>
         </div>
@@ -503,3 +485,4 @@ export default function Home() {
     </div>
   );
 }
+
