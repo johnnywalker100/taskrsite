@@ -383,39 +383,39 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="glass rounded-2xl sm:rounded-3xl border border-white/40 overflow-x-auto">
-            <table className="w-full text-left min-w-[600px]">
+          <div className="glass rounded-2xl sm:rounded-3xl border border-white/40 overflow-hidden">
+            <table className="w-full text-left table-fixed">
               <thead className="bg-white/10">
                 <tr>
-                  <th className="py-3 sm:py-4 px-3 sm:px-6 text-xs sm:text-sm font-semibold text-muted-foreground uppercase tracking-wider text-left">Feature</th>
-                  <th className="py-3 sm:py-4 px-3 sm:px-6 text-xs sm:text-sm font-semibold text-muted-foreground uppercase tracking-wider text-left">Taskr</th>
-                  <th className="py-3 sm:py-4 px-3 sm:px-6 text-xs sm:text-sm font-semibold text-muted-foreground uppercase tracking-wider text-left">Standard Screen Time</th>
+                  <th className="py-2 sm:py-4 px-2 sm:px-6 text-[10px] sm:text-sm font-semibold text-muted-foreground uppercase tracking-wider text-left w-[30%]">Feature</th>
+                  <th className="py-2 sm:py-4 px-2 sm:px-6 text-[10px] sm:text-sm font-semibold text-muted-foreground uppercase tracking-wider text-left w-[35%]">Taskr</th>
+                  <th className="py-2 sm:py-4 px-2 sm:px-6 text-[10px] sm:text-sm font-semibold text-muted-foreground uppercase tracking-wider text-left w-[35%]">Screen Time</th>
                 </tr>
               </thead>
               <tbody>
                 {comparisonRows.map((row, index) => (
                   <tr key={row.feature} className={index !== 0 ? "border-t border-white/20" : ""}>
-                    <td className="py-4 sm:py-6 px-3 sm:px-6 align-top">
-                      <p className="font-semibold text-foreground text-sm sm:text-base">{row.feature}</p>
+                    <td className="py-3 sm:py-6 px-2 sm:px-6 align-top">
+                      <p className="font-semibold text-foreground text-xs sm:text-base leading-tight">{row.feature}</p>
                     </td>
-                    <td className="py-4 sm:py-6 px-3 sm:px-6 align-top">
-                      <div className="flex items-start gap-2 sm:gap-3">
+                    <td className="py-3 sm:py-6 px-2 sm:px-6 align-top">
+                      <div className="flex items-start gap-1 sm:gap-3">
                         {row.taskrHas ? (
-                          <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-mint-dark mt-0.5 sm:mt-1 flex-shrink-0" />
+                          <CheckCircle2 className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-mint-dark mt-0.5 flex-shrink-0" />
                         ) : (
-                          <X className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground mt-0.5 sm:mt-1 flex-shrink-0" />
+                          <X className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-muted-foreground mt-0.5 flex-shrink-0" />
                         )}
-                        <p className="text-muted-foreground text-sm sm:text-base">{row.taskr}</p>
+                        <p className="text-muted-foreground text-xs sm:text-base leading-tight">{row.taskr}</p>
                       </div>
                     </td>
-                    <td className="py-4 sm:py-6 px-3 sm:px-6 align-top">
-                      <div className="flex items-start gap-2 sm:gap-3">
+                    <td className="py-3 sm:py-6 px-2 sm:px-6 align-top">
+                      <div className="flex items-start gap-1 sm:gap-3">
                         {row.screenTimeHas ? (
-                          <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-mint-dark mt-0.5 sm:mt-1 flex-shrink-0" />
+                          <CheckCircle2 className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-mint-dark mt-0.5 flex-shrink-0" />
                         ) : (
-                          <X className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground mt-0.5 sm:mt-1 flex-shrink-0" />
+                          <X className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-muted-foreground mt-0.5 flex-shrink-0" />
                         )}
-                        <p className="text-muted-foreground text-sm sm:text-base">{row.screenTime}</p>
+                        <p className="text-muted-foreground text-xs sm:text-base leading-tight">{row.screenTime}</p>
                       </div>
                     </td>
                   </tr>
