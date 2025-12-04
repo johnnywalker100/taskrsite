@@ -181,7 +181,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-16">
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6 leading-tight">
-              Chores That Actually Get Done
+              Chores That Actually Get Done the First Time You Ask
             </h2>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Powerful features designed for busy parents and simple enough for kids to understand at a glance.
