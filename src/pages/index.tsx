@@ -295,52 +295,52 @@ export default function Home() {
                 Built-in Screen Time Controls
               </h2>
               <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
-                Taskr is a task app that actually enforces chores by tying them directly to Screen Time.
+                This screen is the parent dashboard on the Needs Review tab. Taskr connects chores to Screen Time so you can see what needs your review, which tasks are overdue, and which apps are currently blocked on your child's device.
               </p>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Link tasks to Screen Time rules so that when a task goes overdue, the apps you chose are blocked on your child's device. Once they submit photo proof and you approve it, Taskr lifts those restrictions.
+                Link tasks to Screen Time rules so that when a task goes overdue, the apps you chose are blocked on your child's device. From the Needs Review tab you check photo proof, decide what happens next, and Taskr lifts or keeps those restrictions based on your decision.
               </p>
               <ul className="space-y-4 text-lg text-foreground">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-mint-dark mt-1" />
                   <div>
                     <p className="font-semibold">Automatic app blocking</p>
-                    <p className="text-muted-foreground">When a task is overdue, Taskr turns on Screen Time and blocks the apps or categories you selected.</p>
+                    <p className="text-muted-foreground">When a task is overdue, Taskr turns on Screen Time and blocks the apps or categories you selected for that task.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-mint-dark mt-1" />
                   <div>
                     <p className="font-semibold">Photo proof plus parent decision</p>
-                    <p className="text-muted-foreground">Kids submit a photo when they finish. Approve, reject, or extend the deadline—apps unlock only after approval.</p>
+                    <p className="text-muted-foreground">Kids submit a photo when they finish. Those tasks move into the Needs Review tab so you can approve, reject, or extend the deadline. Apps unlock only after you approve the work.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-mint-dark mt-1" />
                   <div>
                     <p className="font-semibold">Only locks when overdue</p>
-                    <p className="text-muted-foreground">Before the deadline, apps stay available. Taskr only turns on Screen Time when a task is late.</p>
+                    <p className="text-muted-foreground">Before the deadline, apps stay available. Taskr only turns on Screen Time and shows tasks as overdue when a task is late.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-mint-dark mt-1" />
                   <div>
                     <p className="font-semibold">Custom rules and exceptions</p>
-                    <p className="text-muted-foreground">Block social media and games while keeping school apps, calls, or messages available.</p>
+                    <p className="text-muted-foreground">Block social media and games while keeping school apps, calls, or messages available so kids can still reach you and do homework.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-mint-dark mt-1" />
                   <div>
                     <p className="font-semibold">Granular control</p>
-                    <p className="text-muted-foreground">Choose specific apps, full categories, or device-level limits for each child and task type.</p>
+                    <p className="text-muted-foreground">Choose specific apps, full categories, or stronger device-level limits for each child and each type of task.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-mint-dark mt-1" />
                   <div>
                     <p className="font-semibold">No extra hardware</p>
-                    <p className="text-muted-foreground">Everything runs through Apple's Family Controls on iOS, so you use the same trusted Screen Time system.</p>
+                    <p className="text-muted-foreground">Everything runs through Apple's Family Controls on iOS, so you use the same trusted Screen Time system you already know.</p>
                   </div>
                 </li>
               </ul>
