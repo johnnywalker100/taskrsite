@@ -76,7 +76,7 @@
   }
   /* Offset anchor scroll position to account for sticky header */
   section[id] {
-    scroll-margin-top: 4.5rem;
+    scroll-margin-top: 3rem;
   }
 }
 
