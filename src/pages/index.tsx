@@ -464,9 +464,11 @@ export default function Home() {
               <Apple className="w-5 h-5 mr-2" />
               Join the iOS beta
             </Button>
-            <Button size="lg" variant="outline" className="rounded-full text-lg px-8 py-6 border-2 hover:bg-white/50">
-              Contact Support
-            </Button>
+            <Link href="/support">
+              <Button size="lg" variant="outline" className="rounded-full text-lg px-8 py-6 border-2 hover:bg-white/50">
+                Contact Support
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

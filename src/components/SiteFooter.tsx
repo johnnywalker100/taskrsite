@@ -36,13 +36,8 @@ export function SiteFooter() {
             <h3 className="font-semibold mb-4">Company</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link href="/#contact" className="hover:text-foreground transition-colors">
-                  Contact
-                </Link>
-              </li>
-              <li>
                 <Link href="/support" className="hover:text-foreground transition-colors">
-                  Support
+                  Contact Support
                 </Link>
               </li>
               <li>
