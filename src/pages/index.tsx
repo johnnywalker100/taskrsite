@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { useState, useCallback } from "react";
 import Link from "next/link";
+import Head from "next/head";
 import { TaskrLogo } from "@/components/TaskrLogo";
 import { SiteFooter } from "@/components/SiteFooter";
 
@@ -97,8 +98,51 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen gradient-page">
-      <nav className={`sticky top-0 z-50 border-b border-white/20 ${mobileMenuOpen ? 'bg-white/95 backdrop-blur-md' : ''}`}>
+    <>
+      <Head>
+        {/* Primary Meta Tags */}
+        <title>Taskr – Screen Time That Actually Enforces Chores</title>
+        <meta name="title" content="Taskr – Screen Time That Actually Enforces Chores" />
+        <meta
+          name="description"
+          content="When chores go overdue, Taskr turns on Screen Time and blocks apps until kids submit photo proof and parents approve."
+        />
+
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://thetaskr.app" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://thetaskr.app" />
+        <meta property="og:site_name" content="Taskr" />
+        <meta property="og:title" content="Taskr – Screen Time That Actually Enforces Chores" />
+        <meta
+          property="og:description"
+          content="Link chores to Screen Time. When tasks go overdue, Taskr automatically blocks apps until kids submit photo proof and parents approve."
+        />
+        <meta property="og:image" content="https://thetaskr.app/api/og" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Taskr app showing parent dashboard with child tasks and Screen Time controls" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://thetaskr.app" />
+        <meta name="twitter:title" content="Taskr – Screen Time That Actually Enforces Chores" />
+        <meta
+          name="twitter:description"
+          content="When chores go overdue, Taskr turns on Screen Time and blocks apps until kids submit photo proof."
+        />
+        <meta name="twitter:image" content="https://thetaskr.app/api/og" />
+
+        {/* Additional SEO */}
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Taskr" />
+        <meta name="keywords" content="screen time, parental controls, chores, tasks, kids, family, iOS, Apple, Family Controls" />
+      </Head>
+
+      <div className="min-h-screen gradient-page">
+        <nav className={`sticky top-0 z-50 border-b border-white/20 ${mobileMenuOpen ? 'bg-white/95 backdrop-blur-md' : ''}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
@@ -522,8 +566,9 @@ export default function Home() {
         </div>
       </section>
 
-      <SiteFooter />
-    </div>
+        <SiteFooter />
+      </div>
+    </>
   );
 }
 
