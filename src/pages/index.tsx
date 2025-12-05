@@ -101,11 +101,11 @@ export default function Home() {
     <>
       <Head>
         {/* Primary Meta Tags */}
-        <title>Taskr – Screen Time That Actually Enforces Chores</title>
-        <meta name="title" content="Taskr – Screen Time That Actually Enforces Chores" />
+        <title>Taskr – Chores That Actually Get Done</title>
+        <meta name="title" content="Taskr – Chores That Actually Get Done" />
         <meta
           name="description"
-          content="When chores go overdue, Taskr turns on Screen Time and blocks apps until kids submit photo proof and parents approve."
+          content="Create tasks, require photo proof, and approve or reject in seconds. If something goes overdue, Taskr enforces it with automatic Screen Time restrictions until the job is finished."
         />
 
         {/* Canonical URL */}
@@ -115,25 +115,25 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://thetaskr.app" />
         <meta property="og:site_name" content="Taskr" />
-        <meta property="og:title" content="Taskr – Screen Time That Actually Enforces Chores" />
+        <meta property="og:title" content="Taskr – Chores That Actually Get Done" />
         <meta
           property="og:description"
-          content="Link chores to Screen Time. When tasks go overdue, Taskr automatically blocks apps until kids submit photo proof and parents approve."
+          content="Create tasks, require photo proof, and approve or reject in seconds. If something goes overdue, Taskr enforces it with automatic Screen Time restrictions until the job is finished."
         />
-        <meta property="og:image" content="https://thetaskr.app/api/og" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Taskr app showing parent dashboard with child tasks and Screen Time controls" />
+        <meta property="og:image" content="https://thetaskr.app/SCR-20251204-qrlq.png" />
+        <meta property="og:image:width" content="1512" />
+        <meta property="og:image:height" content="838" />
+        <meta property="og:image:alt" content="Taskr app - Create tasks with due times and clear consequences" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://thetaskr.app" />
-        <meta name="twitter:title" content="Taskr – Screen Time That Actually Enforces Chores" />
+        <meta name="twitter:title" content="Taskr – Chores That Actually Get Done" />
         <meta
           name="twitter:description"
-          content="When chores go overdue, Taskr turns on Screen Time and blocks apps until kids submit photo proof."
+          content="Create tasks, require photo proof, and approve or reject in seconds. If something goes overdue, Taskr enforces it with automatic Screen Time restrictions until the job is finished."
         />
-        <meta name="twitter:image" content="https://thetaskr.app/api/og" />
+        <meta name="twitter:image" content="https://thetaskr.app/SCR-20251204-qrlq.png" />
 
         {/* Additional SEO */}
         <meta name="robots" content="index, follow" />
