@@ -120,12 +120,12 @@ export default function Home() {
           property="og:description"
           content="Create tasks, require photo proof, and approve or reject in seconds. If something goes overdue, Taskr enforces it with automatic Screen Time restrictions until the job is finished."
         />
-        <meta property="og:image" content="https://thetaskr.app/api/og" />
-        <meta property="og:image:secure_url" content="https://thetaskr.app/api/og" />
+        <meta property="og:image" content="https://thetaskr.app/SCR-20251204-qrlq.png" />
+        <meta property="og:image:secure_url" content="https://thetaskr.app/SCR-20251204-qrlq.png" />
         <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Taskr - Screen Time That Actually Enforces Chores" />
+        <meta property="og:image:width" content="1512" />
+        <meta property="og:image:height" content="838" />
+        <meta property="og:image:alt" content="Taskr - Create tasks with due times and clear consequences" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -136,7 +136,7 @@ export default function Home() {
           name="twitter:description"
           content="Create tasks, require photo proof, and approve or reject in seconds. If something goes overdue, Taskr enforces it with automatic Screen Time restrictions until the job is finished."
         />
-        <meta name="twitter:image" content="https://thetaskr.app/api/og" />
+        <meta name="twitter:image" content="https://thetaskr.app/SCR-20251204-qrlq.png" />
 
         {/* Additional SEO */}
         <meta name="robots" content="index, follow" />
