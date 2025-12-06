@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "D8YV64MZZV.com.cacchione.zapp",
+        "paths": [
+          "/reset*",
+          "/verify*"
+        ]
+      }
+    ]
+  }
+}
+
