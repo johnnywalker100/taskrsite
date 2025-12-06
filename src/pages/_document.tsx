@@ -12,8 +12,8 @@ export default function Document() {
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         
         {/* Theme color for browser chrome */}
-        <meta name="theme-color" content="#4ADE80" />
-        <meta name="msapplication-TileColor" content="#4ADE80" />
+        <meta name="theme-color" content="#E8F5F0" />
+        <meta name="msapplication-TileColor" content="#E8F5F0" />
         
         {/* Favicons */}
         <link rel="icon" href="/favicon.ico" />

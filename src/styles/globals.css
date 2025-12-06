@@ -67,9 +67,19 @@
   * {
     @apply border-border;
   }
+  html {
+    background-color: #E8F5F0;
+  }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    background: linear-gradient(180deg, 
+      #E8F5F0 0%,
+      #F0F4F8 25%,
+      #F8F0F5 50%,
+      #FFF5EB 75%,
+      #F0F8F5 100%
+    );
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Outfit', sans-serif;
