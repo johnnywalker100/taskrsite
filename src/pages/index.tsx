@@ -160,7 +160,7 @@ export default function Home() {
               <Link href="/support" className="text-muted-foreground hover:text-foreground transition-colors font-medium">
                 Support
               </Link>
-              <a href="https://testflight.apple.com/join/fhCu3yBy" target="_blank" rel="noopener noreferrer">
+              <a href="https://sbob101.app.n8n.cloud/form/e6a2e51d-4037-4c17-a50a-34d2d68aab95" target="_blank" rel="noopener noreferrer">
                 <Button className="bg-black text-white hover:bg-black/90 rounded-full px-6">
                   Join the iOS beta
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -191,7 +191,7 @@ export default function Home() {
                 <Link href="/support" onClick={closeMenu} className="block py-2 text-muted-foreground hover:text-foreground transition-colors">
                   Support
                 </Link>
-                <a href="https://testflight.apple.com/join/fhCu3yBy" target="_blank" rel="noopener noreferrer" onClick={closeMenu} className="block">
+                <a href="https://sbob101.app.n8n.cloud/form/e6a2e51d-4037-4c17-a50a-34d2d68aab95" target="_blank" rel="noopener noreferrer" onClick={closeMenu} className="block">
                   <Button className="w-full bg-black text-white hover:bg-black/90 rounded-full">
                     Join the iOS beta
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -216,7 +216,7 @@ export default function Home() {
               Assign tasks with due times. If they go overdue, taskr turns on Screen Time and blocks selected apps until you approve your child's work from a photo submission.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
-              <a href="https://testflight.apple.com/join/fhCu3yBy" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <a href="https://sbob101.app.n8n.cloud/form/e6a2e51d-4037-4c17-a50a-34d2d68aab95" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <Button size="lg" className="bg-black text-white hover:bg-black/90 rounded-full text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 w-full">
                   <Apple className="w-5 h-5 mr-2" />
                   Join the iOS beta
