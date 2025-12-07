@@ -330,17 +330,9 @@ export default function ResetPasswordPage() {
                 </form>
               )}
               {state.status === "success" && (
-                <div className="flex flex-col gap-3">
-                  <p className="text-center text-muted-foreground text-sm">
-                    Open the taskr app and sign in with your new password.
-                  </p>
-                  <Link href="/" className="w-full">
-                    <Button variant="outline" className="w-full rounded-full">
-                      Go to Homepage
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </Link>
-                </div>
+                <p className="text-center text-muted-foreground">
+                  Go back to the taskr app and sign in with your new password.
+                </p>
               )}
               {(state.status === "loading" || state.status === "updating") && (
                 <p className="text-center text-muted-foreground">

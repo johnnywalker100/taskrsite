@@ -3,7 +3,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle2, XCircle, Loader2, ArrowRight, Smartphone } from "lucide-react";
+import { CheckCircle2, XCircle, Loader2, ArrowRight } from "lucide-react";
 import { TaskrLogo } from "@/components/TaskrLogo";
 import { SiteFooter } from "@/components/SiteFooter";
 import { createClient } from "@supabase/supabase-js";
@@ -200,29 +200,9 @@ export default function AuthCallbackPage() {
             </CardHeader>
             <CardContent className="space-y-4 pt-4">
               {state.status === "success" && (
-                <>
-                  <p className="text-center text-muted-foreground">
-                    You can now open the taskr app to continue.
-                  </p>
-                  <div className="flex flex-col gap-3">
-                    <Button 
-                      className="w-full bg-black text-white hover:bg-black/90 rounded-full"
-                      onClick={() => {
-                        // Try to open the app via deep link
-                        window.location.href = "taskr://authenticated";
-                      }}
-                    >
-                      <Smartphone className="w-4 h-4 mr-2" />
-                      Open taskr App
-                    </Button>
-                    <Link href="/" className="w-full">
-                      <Button variant="outline" className="w-full rounded-full">
-                        Go to Homepage
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Button>
-                    </Link>
-                  </div>
-                </>
+                <p className="text-center text-muted-foreground">
+                  You can now go back to the taskr app to continue.
+                </p>
               )}
               {state.status === "loading" && (
                 <p className="text-center text-muted-foreground">
