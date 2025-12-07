@@ -1,0 +1,250 @@
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import Head from "next/head";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { CheckCircle2, XCircle, Loader2, ArrowRight, Smartphone } from "lucide-react";
+import { TaskrLogo } from "@/components/TaskrLogo";
+import { SiteFooter } from "@/components/SiteFooter";
+import { createClient } from "@supabase/supabase-js";
+
+// Initialize Supabase client
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
+
+const supabase = supabaseUrl && supabaseAnonKey 
+  ? createClient(supabaseUrl, supabaseAnonKey)
+  : null;
+
+type VerificationStatus = "loading" | "success" | "error" | "no-token";
+
+interface VerificationState {
+  status: VerificationStatus;
+  message: string;
+  errorDetails?: string;
+}
+
+export default function VerifyEmailPage() {
+  const [state, setState] = useState<VerificationState>({
+    status: "loading",
+    message: "Verifying your email...",
+  });
+
+  useEffect(() => {
+    const verifyEmail = async () => {
+      // Check if Supabase is configured
+      if (!supabase) {
+        setState({
+          status: "error",
+          message: "Configuration Error",
+          errorDetails: "Supabase is not configured. Please contact support.",
+        });
+        return;
+      }
+
+      // Get tokens from URL - check both hash and query params
+      const hash = window.location.hash;
+      const searchParams = new URLSearchParams(window.location.search);
+      
+      let accessToken: string | null = null;
+      let refreshToken: string | null = null;
+      let type: string | null = null;
+
+      // Try to get tokens from hash (Supabase default)
+      if (hash) {
+        const hashParams = new URLSearchParams(hash.substring(1));
+        accessToken = hashParams.get("access_token");
+        refreshToken = hashParams.get("refresh_token");
+        type = hashParams.get("type");
+      }
+
+      // Fallback to query params
+      if (!accessToken) {
+        accessToken = searchParams.get("access_token");
+        refreshToken = searchParams.get("refresh_token");
+        type = searchParams.get("type");
+      }
+
+      // Check for token_hash (alternative format)
+      const tokenHash = searchParams.get("token_hash") || new URLSearchParams(hash.substring(1)).get("token_hash");
+      const tokenType = searchParams.get("type") || type;
+
+      // If we have token_hash, use verifyOtp
+      if (tokenHash && tokenType) {
+        try {
+          const { error } = await supabase.auth.verifyOtp({
+            token_hash: tokenHash,
+            type: tokenType as "signup" | "email" | "recovery" | "invite" | "email_change",
+          });
+
+          if (error) {
+            setState({
+              status: "error",
+              message: "Verification Failed",
+              errorDetails: error.message,
+            });
+          } else {
+            setState({
+              status: "success",
+              message: "Email Verified Successfully!",
+            });
+          }
+          return;
+        } catch (err) {
+          setState({
+            status: "error",
+            message: "Verification Failed",
+            errorDetails: err instanceof Error ? err.message : "An unexpected error occurred",
+          });
+          return;
+        }
+      }
+
+      // If we have access_token and refresh_token, set the session
+      if (accessToken && refreshToken) {
+        try {
+          const { error } = await supabase.auth.setSession({
+            access_token: accessToken,
+            refresh_token: refreshToken,
+          });
+
+          if (error) {
+            setState({
+              status: "error",
+              message: "Verification Failed",
+              errorDetails: error.message,
+            });
+          } else {
+            setState({
+              status: "success",
+              message: "Email Verified Successfully!",
+            });
+          }
+          return;
+        } catch (err) {
+          setState({
+            status: "error",
+            message: "Verification Failed",
+            errorDetails: err instanceof Error ? err.message : "An unexpected error occurred",
+          });
+          return;
+        }
+      }
+
+      // No tokens found
+      setState({
+        status: "no-token",
+        message: "No Verification Token Found",
+        errorDetails: "This link may have expired or already been used. Please request a new verification email.",
+      });
+    };
+
+    verifyEmail();
+  }, []);
+
+  return (
+    <>
+      <Head>
+        <title>Verify Email - taskr</title>
+        <meta name="description" content="Verify your taskr account email address" />
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
+
+      <div className="min-h-screen gradient-page flex flex-col">
+        <nav className="sticky top-0 z-50 border-b border-white/20 bg-white/80 backdrop-blur-md">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center h-16">
+              <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                <TaskrLogo className="w-10 h-10" />
+                <span className="text-2xl font-bold text-foreground">taskr</span>
+              </Link>
+            </div>
+          </div>
+        </nav>
+
+        <main className="flex-1 flex items-center justify-center px-4 py-12 sm:py-20">
+          <Card className="w-full max-w-md glass border-white/40">
+            <CardHeader className="text-center pb-2">
+              <div className="mx-auto mb-4">
+                {state.status === "loading" && (
+                  <div className="w-16 h-16 rounded-full bg-mint-light/50 flex items-center justify-center">
+                    <Loader2 className="w-8 h-8 text-mint-dark animate-spin" />
+                  </div>
+                )}
+                {state.status === "success" && (
+                  <div className="w-16 h-16 rounded-full bg-mint-light/50 flex items-center justify-center">
+                    <CheckCircle2 className="w-8 h-8 text-mint-dark" />
+                  </div>
+                )}
+                {(state.status === "error" || state.status === "no-token") && (
+                  <div className="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center">
+                    <XCircle className="w-8 h-8 text-red-500" />
+                  </div>
+                )}
+              </div>
+              <CardTitle className="text-2xl font-bold">{state.message}</CardTitle>
+              {state.errorDetails && (
+                <CardDescription className="text-muted-foreground mt-2">
+                  {state.errorDetails}
+                </CardDescription>
+              )}
+            </CardHeader>
+            <CardContent className="space-y-4 pt-4">
+              {state.status === "success" && (
+                <>
+                  <p className="text-center text-muted-foreground">
+                    Your email has been verified. You can now open the taskr app and sign in to your account.
+                  </p>
+                  <div className="flex flex-col gap-3">
+                    <Button 
+                      className="w-full bg-black text-white hover:bg-black/90 rounded-full"
+                      onClick={() => {
+                        // Try to open the app via deep link
+                        window.location.href = "taskr://verified";
+                      }}
+                    >
+                      <Smartphone className="w-4 h-4 mr-2" />
+                      Open taskr App
+                    </Button>
+                    <Link href="/" className="w-full">
+                      <Button variant="outline" className="w-full rounded-full">
+                        Go to Homepage
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Button>
+                    </Link>
+                  </div>
+                </>
+              )}
+              {state.status === "loading" && (
+                <p className="text-center text-muted-foreground">
+                  Please wait while we verify your email address...
+                </p>
+              )}
+              {(state.status === "error" || state.status === "no-token") && (
+                <div className="flex flex-col gap-3">
+                  <p className="text-center text-muted-foreground text-sm">
+                    If you continue to have issues, please contact our support team.
+                  </p>
+                  <Link href="/support" className="w-full">
+                    <Button variant="outline" className="w-full rounded-full">
+                      Contact Support
+                    </Button>
+                  </Link>
+                  <Link href="/" className="w-full">
+                    <Button variant="ghost" className="w-full rounded-full">
+                      Go to Homepage
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Button>
+                  </Link>
+                </div>
+              )}
+            </CardContent>
+          </Card>
+        </main>
+
+        <SiteFooter />
+      </div>
+    </>
+  );
+}
+
