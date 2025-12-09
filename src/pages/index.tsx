@@ -562,10 +562,12 @@ export default function Home() {
             Help us shape how Screen Time and chores work together so kids know exactly what is due and what happens when they miss a deadline.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
-            <Button size="lg" className="bg-black text-white hover:bg-black/90 rounded-full text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 w-full sm:w-auto">
-              <Apple className="w-5 h-5 mr-2" />
-              Join the iOS beta
-            </Button>
+            <a href="https://sbob101.app.n8n.cloud/form/e6a2e51d-4037-4c17-a50a-34d2d68aab95" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <Button size="lg" className="bg-black text-white hover:bg-black/90 rounded-full text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 w-full">
+                <Apple className="w-5 h-5 mr-2" />
+                Join the iOS beta
+              </Button>
+            </a>
             <Link href="/support" className="w-full sm:w-auto">
               <Button size="lg" variant="outline" className="rounded-full text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 border-2 hover:bg-white/50 w-full">
                 Contact Support
