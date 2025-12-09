@@ -1,6 +1,6 @@
 {
-  "name": "Taskr",
-  "short_name": "Taskr",
+  "name": "taskr",
+  "short_name": "taskr",
   "description": "Turn chores into Screen Time-backed tasks for iOS families",
   "start_url": "/",
   "display": "standalone",

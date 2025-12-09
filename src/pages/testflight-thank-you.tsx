@@ -7,8 +7,8 @@ export default function TestFlightThankYou() {
   return (
     <>
       <Head>
-        <title>You're In – Taskr Beta</title>
-        <meta name="description" content="Install the Taskr iOS beta via TestFlight." />
+        <title>You're In – taskr Beta</title>
+        <meta name="description" content="Install the taskr iOS beta via TestFlight." />
         <meta name="robots" content="noindex, nofollow" />
       </Head>
 
@@ -57,7 +57,7 @@ export default function TestFlightThankYou() {
 
           {/* Step 2 */}
           <div className="glass rounded-2xl border border-white/40 p-6 sm:p-8 shadow-lg mb-6">
-            <h2 className="text-lg font-semibold text-foreground mb-4">Step 2: Open the Taskr beta link</h2>
+            <h2 className="text-lg font-semibold text-foreground mb-4">Step 2: Open the taskr beta link</h2>
             <a
               href="https://testflight.apple.com/join/fhCu3yBy"
               target="_blank"
@@ -67,7 +67,7 @@ export default function TestFlightThankYou() {
               https://testflight.apple.com/join/fhCu3yBy
             </a>
             <p className="text-muted-foreground">
-              Tap <span className="font-medium text-foreground">View in TestFlight</span>, then <span className="font-medium text-foreground">Accept</span> and install Taskr.
+              Tap <span className="font-medium text-foreground">View in TestFlight</span>, then <span className="font-medium text-foreground">Accept</span> and install taskr.
             </p>
           </div>
 

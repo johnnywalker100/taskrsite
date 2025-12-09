@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { useState, useCallback } from "react";
 import Link from "next/link";
 import Head from "next/head";
-import { TaskrLogo } from "@/components/TaskrLogo";
+import { taskrLogo } from "@/components/taskrLogo";
 import { SiteFooter } from "@/components/SiteFooter";
 
 export default function Home() {
@@ -101,11 +101,11 @@ export default function Home() {
     <>
       <Head>
         {/* Primary Meta Tags */}
-        <title>Taskr – Chores That Actually Get Done</title>
-        <meta name="title" content="Taskr – Chores That Actually Get Done" />
+        <title>taskr – Chores That Actually Get Done</title>
+        <meta name="title" content="taskr – Chores That Actually Get Done" />
         <meta
           name="description"
-          content="Create tasks, require photo proof, and approve or reject in seconds. If something goes overdue, Taskr enforces it with automatic Screen Time restrictions until the job is finished."
+          content="Create tasks, require photo proof, and approve or reject in seconds. If something goes overdue, taskr enforces it with automatic Screen Time restrictions until the job is finished."
         />
 
         {/* Canonical URL */}
@@ -114,33 +114,33 @@ export default function Home() {
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://thetaskr.app" />
-        <meta property="og:site_name" content="Taskr" />
-        <meta property="og:title" content="Taskr – Chores That Actually Get Done" />
+        <meta property="og:site_name" content="taskr" />
+        <meta property="og:title" content="taskr – Chores That Actually Get Done" />
         <meta
           property="og:description"
-          content="Create tasks, require photo proof, and approve or reject in seconds. If something goes overdue, Taskr enforces it with automatic Screen Time restrictions until the job is finished."
+          content="Create tasks, require photo proof, and approve or reject in seconds. If something goes overdue, taskr enforces it with automatic Screen Time restrictions until the job is finished."
         />
         <meta property="og:image" content="https://thetaskr.app/SCR-20251204-qrlq.png" />
         <meta property="og:image:secure_url" content="https://thetaskr.app/SCR-20251204-qrlq.png" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1512" />
         <meta property="og:image:height" content="838" />
-        <meta property="og:image:alt" content="Taskr - Create tasks with due times and clear consequences" />
+        <meta property="og:image:alt" content="taskr - Create tasks with due times and clear consequences" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@thetaskrapp" />
         <meta name="twitter:url" content="https://thetaskr.app" />
-        <meta name="twitter:title" content="Taskr – Chores That Actually Get Done" />
+        <meta name="twitter:title" content="taskr – Chores That Actually Get Done" />
         <meta
           name="twitter:description"
-          content="Create tasks, require photo proof, and approve or reject in seconds. If something goes overdue, Taskr enforces it with automatic Screen Time restrictions until the job is finished."
+          content="Create tasks, require photo proof, and approve or reject in seconds. If something goes overdue, taskr enforces it with automatic Screen Time restrictions until the job is finished."
         />
         <meta name="twitter:image" content="https://thetaskr.app/SCR-20251204-qrlq.png" />
 
         {/* Additional SEO */}
         <meta name="robots" content="index, follow" />
-        <meta name="author" content="Taskr" />
+        <meta name="author" content="taskr" />
         <meta name="keywords" content="screen time, parental controls, chores, tasks, kids, family, iOS, Apple, Family Controls" />
       </Head>
 
@@ -149,7 +149,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <TaskrLogo className="w-10 h-10" />
+              <taskrLogo className="w-10 h-10" />
               <span className="text-2xl font-bold text-foreground">taskr</span>
             </Link>
             
