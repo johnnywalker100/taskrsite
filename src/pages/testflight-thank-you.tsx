@@ -41,12 +41,7 @@ export default function TestFlightThankYou() {
 
           {/* Step 1 */}
           <div className="glass rounded-2xl border border-white/40 p-6 sm:p-8 shadow-lg mb-6">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-8 rounded-full bg-mint-dark text-white flex items-center justify-center font-bold text-sm">
-                1
-              </div>
-              <h2 className="text-lg font-semibold text-foreground">Step 1: Install TestFlight</h2>
-            </div>
+            <h2 className="text-lg font-semibold text-foreground mb-4">Step 1: Install TestFlight</h2>
             <p className="text-muted-foreground mb-4">
               Apple's beta app tool:
             </p>
@@ -62,12 +57,7 @@ export default function TestFlightThankYou() {
 
           {/* Step 2 */}
           <div className="glass rounded-2xl border border-white/40 p-6 sm:p-8 shadow-lg mb-6">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-8 rounded-full bg-mint-dark text-white flex items-center justify-center font-bold text-sm">
-                2
-              </div>
-              <h2 className="text-lg font-semibold text-foreground">Step 2: Open the Taskr beta link</h2>
-            </div>
+            <h2 className="text-lg font-semibold text-foreground mb-4">Step 2: Open the Taskr beta link</h2>
             <a
               href="https://testflight.apple.com/join/fhCu3yBy"
               target="_blank"
