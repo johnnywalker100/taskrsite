@@ -45,7 +45,7 @@ export default function TestFlightThankYou() {
               <div className="w-8 h-8 rounded-full bg-mint-dark text-white flex items-center justify-center font-bold text-sm">
                 1
               </div>
-              <h2 className="text-lg font-semibold text-foreground">Install TestFlight</h2>
+              <h2 className="text-lg font-semibold text-foreground">Step 1: Install TestFlight</h2>
             </div>
             <p className="text-muted-foreground mb-4">
               Apple's beta app tool:
@@ -66,7 +66,7 @@ export default function TestFlightThankYou() {
               <div className="w-8 h-8 rounded-full bg-mint-dark text-white flex items-center justify-center font-bold text-sm">
                 2
               </div>
-              <h2 className="text-lg font-semibold text-foreground">Open the Taskr beta link</h2>
+              <h2 className="text-lg font-semibold text-foreground">Step 2: Open the Taskr beta link</h2>
             </div>
             <a
               href="https://testflight.apple.com/join/fhCu3yBy"
