@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { useState, useCallback } from "react";
 import Link from "next/link";
 import Head from "next/head";
-import { taskrLogo } from "@/components/taskrLogo";
+import { TaskrLogo } from "@/components/TaskrLogo";
 import { SiteFooter } from "@/components/SiteFooter";
 
 export default function Home() {
@@ -149,7 +149,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <taskrLogo className="w-10 h-10" />
+              <TaskrLogo className="w-10 h-10" />
               <span className="text-2xl font-bold text-foreground">taskr</span>
             </Link>
             
