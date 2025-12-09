@@ -59,10 +59,6 @@ export function SiteFooter() {
             </ul>
           </div>
         </div>
-
-        <div className="border-t border-white/40 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-muted-foreground">
-          <p>© 2025 taskr. All rights reserved.</p>
-        </div>
       </div>
     </footer>
   );
