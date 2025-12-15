@@ -160,9 +160,9 @@ export default function Home() {
               <Link href="/support" className="text-muted-foreground hover:text-foreground transition-colors font-medium">
                 Support
               </Link>
-              <a href="https://sbob101.app.n8n.cloud/form/e6a2e51d-4037-4c17-a50a-34d2d68aab95" target="_blank" rel="noopener noreferrer">
+              <a href="https://apps.apple.com/us/app/taskr-family-task-manager/id6755744833" target="_blank" rel="noopener noreferrer">
                 <Button className="bg-black text-white hover:bg-black/90 rounded-full px-6">
-                  Join the iOS beta
+                  Try now
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </a>
@@ -191,9 +191,9 @@ export default function Home() {
                 <Link href="/support" onClick={closeMenu} className="block py-2 text-muted-foreground hover:text-foreground transition-colors">
                   Support
                 </Link>
-                <a href="https://sbob101.app.n8n.cloud/form/e6a2e51d-4037-4c17-a50a-34d2d68aab95" target="_blank" rel="noopener noreferrer" onClick={closeMenu} className="block">
+                <a href="https://apps.apple.com/us/app/taskr-family-task-manager/id6755744833" target="_blank" rel="noopener noreferrer" onClick={closeMenu} className="block">
                   <Button className="w-full bg-black text-white hover:bg-black/90 rounded-full">
-                    Join the iOS beta
+                    Try now
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </a>
@@ -216,15 +216,15 @@ export default function Home() {
               Assign tasks with due times. If they go overdue, taskr turns on Screen Time and blocks selected apps until you approve your child's work from a photo submission.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
-              <a href="https://sbob101.app.n8n.cloud/form/e6a2e51d-4037-4c17-a50a-34d2d68aab95" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <a href="https://apps.apple.com/us/app/taskr-family-task-manager/id6755744833" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <Button size="lg" className="bg-black text-white hover:bg-black/90 rounded-full text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 w-full">
                   <Apple className="w-5 h-5 mr-2" />
-                  Join the iOS beta
+                  Try now
                 </Button>
               </a>
             </div>
             <p className="text-sm sm:text-base text-muted-foreground mt-3">
-              Get early access and help shape taskr.
+              Free to download on the App Store.
             </p>
           </div>
         </div>
@@ -557,15 +557,15 @@ export default function Home() {
 
       <section id="contact" className="py-12 sm:py-20 lg:py-32">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">Join early families testing taskr</h2>
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">Get started with taskr today</h2>
           <p className="text-base sm:text-xl text-muted-foreground mb-6 sm:mb-10 leading-relaxed">
-            Help us shape how Screen Time and chores work together so kids know exactly what is due and what happens when they miss a deadline.
+            Connect Screen Time to chores so kids know exactly what is due and what happens when they miss a deadline.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
-            <a href="https://sbob101.app.n8n.cloud/form/e6a2e51d-4037-4c17-a50a-34d2d68aab95" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+            <a href="https://apps.apple.com/us/app/taskr-family-task-manager/id6755744833" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
               <Button size="lg" className="bg-black text-white hover:bg-black/90 rounded-full text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 w-full">
                 <Apple className="w-5 h-5 mr-2" />
-                Join the iOS beta
+                Try now
               </Button>
             </a>
             <Link href="/support" className="w-full sm:w-auto">
