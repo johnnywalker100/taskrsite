@@ -210,7 +210,7 @@ export default function Home() {
               Built for iOS families
             </Badge>
             <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold text-foreground mb-4 sm:mb-6 text-balance leading-tight">
-              Everything You Need to Run a Smooth Household
+              No Chores. No Screentime
             </h1>
             <p className="text-base sm:text-xl lg:text-2xl text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto text-balance leading-relaxed">
               Assign tasks with due times. If they go overdue, taskr turns on Screen Time and blocks selected apps until you approve your child's work from a photo submission.
